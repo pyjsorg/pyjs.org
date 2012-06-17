@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Pyjs</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css"/>
+</head>
+
+<body>
+<div id="menu">
+    <div id="logo"><img src="assets/images/pyjs.128x128.png" alt="pyjs" /></div>
+    
+<ul class="simple">
+<li><a class="reference external" href="About.html">About</a></li>
+<li><a class="reference external" href="Overview.html">Overview</a></li>
+<li><a class="reference external" href="Features.html">Features</a></li>
+<li><a class="reference external" href="Translator.html">Translator</a></li>
+<li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
+<li><a class="reference external" href="GettingHelp.html">Getting Help</a></li>
+<li><a class="reference external" href="Developing.html">Developing</a></li>
+<li class="section">Documentation</li>
+<li><a class="reference external" href="UIHierarchy.html">UI Hierarchy</a></li>
+<li><a class="reference external" href="api">API Docs</a></li>
+<li><a class="reference external" href="FAQ.html">FAQ</a></li>
+</ul>
+
+</div>
+<div id="body">
+<h1 class="title">Writing a Widget for Pyjamas</h1>
+<p>An important part of a widget toolkit is being able to write your own widgets.  In many widget sets, you are confronted immediately with a quite complex set of unusual-looking functions - paint, draw, refresh and other manipulations.  Pyjamas has none of that: in both Pyjamas and Pyjamas-Desktop you're manipulating the DOM model - an HTML page - as if it was an XML document.  Better than that: unlike with manipulating an HTML page, you don't have to get involved with Javascript - unless you want to.  Pyjamas provides a module which makes the job of controlling the underlying DOM model that much easier, and this tutorial shows step-by-step how to go about creating your own widget.</p>
+<p>Missing from the HTML specification, but present in Adobe Flash, is things like sliders and dials.  Many Desktop widget sets have them, so it makes a lot of sense to create one.  We'll start with a simple Vertical scroller which receives &quot;mouse click&quot; to change the position. (For those people who would like to see the completed source code click <a class="reference external" href="http://github.com/lkcl/pyjamas-desktop/tree/master/pyjamas-webkit/pyjamas/Controls.py">here</a>).</p>
+<div class="section" id="vertical-slider">
+<h1>Vertical Slider</h1>
+<p>We start off by importing the DOM model and, because the slider will receive mouse (and later keyboard) events, we base it on FocusWidget. FocusWidget has the means to add keyboard and event listeners, set a &quot;tab order&quot; index, and to set and clear focus:</p>
+<pre class="literal-block">
+from pyjamas import DOM
+from pyjamas.ui import FocusWidget
+</pre>
+<p>So, we derive our class from FocusWidget.  We don't declare a width and height as parameters, because Pyjamas Widgets are based on HTML principles: DOM models.  So, you either set the CSS &quot;Class&quot; with setStyleName(), or you use the Pyjamas Widget functions setWidth() and setHeight().  We <em>do</em> however want to pass in the slider's minimum, maximum and default values, and we may also want to keep track of who might be interested to know that the slider's value has changed.  This is an important point to emphasise: your widgets should not impose &quot;look&quot; onto users - that should, ideally be defined through CSS: your Widget Class API should be about &quot;function&quot; rather than &quot;form&quot;.  So - the constructor for the widget has minimum, maximum and default values <em>not</em> width and height.</p>
+<pre class="literal-block">
+class VerticalDemoSlider(FocusWidget):
+
+  def __init__(self, min_value, max_value, start_value=None):
+
+    element = DOM.createDiv()
+    FocusWidget.__init__(self, element)
+
+    self.min_value = min_value
+    self.max_value = max_value
+    if start_value is None:
+      start_value = min_value
+    self.value = start_value
+    self.valuechange_listeners = []
+</pre>
+<p>Here also is the first actual bit of underlying HTML / DOM model showing through: we're basing the widget on a &quot;div&quot; tag, hence we call DOM.createDiv() and set that as the FocusWidget's element. (Immediately, therefore, you can see that the Pyjamas Widgets are effectively... &quot;guardian&quot; classes that look after and manipulate bits of the underlying DOM model, making the whole process of creating and maintaining your application just that little bit easier to understand). We're also going to copy what AbsolutePanel.__init__() does, making the container DIV free-moving, and we're also going to throw in a second hard-coded &quot;div&quot; for the actual slider handle:</p>
+<pre class="literal-block">
+DOM.setStyleAttribute(element, &quot;position&quot;, &quot;relative&quot;)
+DOM.setStyleAttribute(element, &quot;overflow&quot;, &quot;hidden&quot;)
+
+self.handle = DOM.createDiv()
+DOM.appendChild(element, self.handle)
+</pre>
+<p>Then, as this is just a demonstration, we're going to hand-code the slider handle with some attributes, making it 10 pixels high, a border of 1 pixel, fixing it to be the same width as the Widget, and making it a grey colour.  A much better way to do this would be to set a CSS stylesheet where people could over-ride all these settings.  Note that we don't use DOM.setAttribute() to set the border, width and height. You should consult HTML specifications: you will find that &quot;border&quot; is an attribute for DOM tags such as &quot;table&quot;.  So, if you try to call DOM.setAttribute() on a DIV tag, you'll find that it silently fails in the browser - or if you remember, and examine the Javascript Console, you <em>might</em> be lucky and find a warning.  However, if you try the same thing under Pyjamas-Desktop you will be rewarded with a much more useful run-time error. The upshot is: pay attention to the underlying DOM model, and remember to simultaneously develop your app using <em>both</em> Pyjamas <em>and</em> Pyjamas-Desktop, to save yourself a great deal of time.  If you want to set a border on a &quot;div&quot; tag, you must set it as a CSS Style attribute:</p>
+<pre class="literal-block">
+DOM.setStyleAttribute(self.handle, &quot;border&quot;, &quot;1px&quot;)
+DOM.setStyleAttribute(self.handle, &quot;width&quot;, &quot;100%&quot;)
+DOM.setStyleAttribute(self.handle, &quot;height&quot;, &quot;10px&quot;)
+DOM.setStyleAttribute(self.handle, &quot;backgroundColor&quot;, &quot;#808080&quot;)
+</pre>
+</div>
+<div class="section" id="testing">
+<h1>Testing</h1>
+<p>With the basic beginnings, it's enough to test out, to see if we have it working.  If all we wanted was a little grey box in our widget, we'd be entirely done.</p>
+<pre class="literal-block">
+&quot;&quot;&quot; testing our demo slider
+&quot;&quot;&quot;
+from pyjamas.ui import RootPanel
+from pyjamas.Controls import VerticalDemoSlider
+
+class ControlDemo:
+  def onModuleLoad(self):
+    b = VerticalDemoSlider(0, 100)
+    RootPanel().add(b)
+    b.setWidth(&quot;20px&quot;)
+    b.setHeight(&quot;100px&quot;)
+</pre>
+<p>One thing I love about Pyjamas: this is enough code to do exactly what you want: create our slider, add it to the root panel, set its width to 20 pixels and the height to 100.  Couldn't get any easier.  A quick run of this code shows that yes, indeed, we have a little grey box, which is very exciting.  Next on the list is to make it move, and for that, we'll add a &quot;click listener&quot;.</p>
+</div>
+<div class="section" id="making-it-move">
+<h1>Making it move</h1>
+<p>To receive a click event, we use FocusWidget.addClickListener().  We're going to make the widget itself receive the mouse click event.  Looking at FocusWidget.onBrowserEvent(), we can see that we must add a function called onClick() to our VerticalDemoSlider.  As we want to know <em>where</em> the mouse was clicked, we will need to add two arguments to the onClick() function, in order to receive the mouse event object as the second. Then, we simply take the mouse event y position, the absolute location of the container, and the &quot;offset height&quot; of the widget, do a little math and, copying some lines of code from absolutePanel.setWidgetPosition, we can change the location of the slider handle:</p>
+<pre class="literal-block">
+def onClick(self, sender, event):
+
+    # work out the relative position of cursor
+    mouse_y = DOM.eventGetClientY(event) - \
+               DOM.getAbsoluteTop(sender.getElement())
+    self.moveSlider(mouse_y)
+
+def moveSlider(self, mouse_y):
+
+    relative_y = mouse_y - DOM.getAbsoluteTop(self.getElement())
+    widget_height = self.getOffsetHeight()
+
+    # limit the position to be in the widget!
+    if relative_y &lt; 0:
+        relative_y = 0
+    height_range = widget_height - 10 # handle height is hard-coded
+    if relative_y &gt;= height_range:
+        relative_y = height_range
+
+    # move the handle
+    DOM.setStyleAttribute(self.handle, &quot;top&quot;, &quot;%dpx&quot; % relative_y)
+    DOM.setStyleAttribute(self.handle, &quot;position&quot;, &quot;absolute&quot;)
+</pre>
+<p>Okay - let's test it!  Save, run... lights, camera, action, aaand... nothing.  huh.  What have we done wrong?  Oh yes, we forgot a very important line.  Go back to VerticalDemoSlider.__init__ and add this, at the end, and try again:</p>
+<pre class="literal-block">
+self.addClickListener(self)
+</pre>
+<p>Amazing!  We have a slider widget!  A single-click moves the slider to where you clicked the mouse.  Notice how the slider centre moves to where your mouse pointer actually points to: this is entirely a fluke, and is probably due to bugs in the CSS style implementation of your browser. Notice also that we haven't actually set the value of the &quot;slider&quot;, but there's enough maths to calculate it.  We can add these extra lines on to the end of moveSlider():</p>
+<pre class="literal-block">
+val_diff = self.max_value - self.min_value
+new_value = ((val_diff * relative_y) / height_range) + self.min_value
+self.setValue(new_value)
+</pre>
+<p>Then, we also add a setValue() function, which not only records the new value but also notifies any listeners.  Copying the style of Label and other widgets' addClickListener() and removeClickListener() functions, we're doing addControlValueListener() and removeControlValueListener() to match.</p>
+<pre class="literal-block">
+def setValue(self, new_value):
+
+    old_value = self.value
+    self.value = new_value
+    for listener in self.valuechange_listeners:
+        listener.onControlValueChanged(self, old_value, new_value)
+
+def addControlValueListener(self, listener):
+    self.valuechange_listeners.append(listener)
+
+def removeControlValueListener(self, listener):
+    self.valuechange_listeners.remove(listener)
+</pre>
+<p>Now we should really see if that works.  In the &quot;test code&quot;, add these extra lines to ControlDemo.onModuleLoad() and also add the additional function onControlValueChanged:</p>
+<pre class="literal-block">
+    b.addControlValueListener(self)
+    self.label = Label(&quot;Not set yet&quot;)
+    RootPanel().add(self.label)
+
+def onControlValueChanged(self, slider, old_value, new_value):
+    self.label.setText(&quot;Value: %d&quot; % int(new_value))
+</pre>
+<p>A quick run of this shows our Control Demo app has a very boring Text Label 200 pixels underneath a grey box, with the words &quot;Not set yet&quot;.  Clicking anywhere between the box and the words not only moves the slider, but also changes the text to say &quot;Value: 83&quot; or something to that effect.  Amazing.</p>
+</div>
+<div class="section" id="improvements">
+<h1>Improvements</h1>
+<p>Congratulations, you have a slider, in 70 lines of python code, and a demonstration of its use in 20.  You can click on it.  Please feel free to resist the urge to press the up and down arrows and to click and hold the mouse: it won't work.  Adding that functionality will be for another day's hacking, which you're welcome to send to me (<a class="reference external" href="mailto:lkcl&#64;lkcl.net">lkcl&#64;lkcl.net</a>) and I will add it in.</p>
+<p>Hints: look at Image.onBrowserEvent() - you will notice that it differs from FocusWidget.onBrowserEvent() in that it also handles mouse move, enter, leave and up.  These events all get passed to an instance of MouseListener(), calling its fireMouseEvent() function.  Then, look at DialogBox and notice that it does all sorts of strange and wonderful things, including the use of &quot;capture&quot;:</p>
+<pre class="literal-block">
+def onMouseDown(self, sender, x, y):
+    self.dragging = True
+    DOM.setCapture(self.caption.getElement())
+    self.dragStartX = x
+    self.dragStartY = y
+</pre>
+<p>This is pretty important - to set &quot;capture&quot; of all mouse events. In the case of the Dialog Box, the events are captured by the &quot;caption&quot; at the top of the box, which is the &quot;drag bar&quot;.  That sounds... very much exactly like what we want, so feel free to cut-and-paste DialogBox's onMouseDown, onMouseUp, onMouseMove, onMouseLeave and onMouseEnter functions; remember to call VerticalDemoSlider.moveSlider() not setPopupPosition(); and remember to take a copy e.g. of Image.onBrowserEvent(), or take a copy of FocusWidget.onBrowserEvent() and extend it with these all-important lines:</p>
+<pre class="literal-block">
+elif type == &quot;mouseup&quot; or type == &quot;mousemove&quot; or type == &quot;mouseover&quot; or type == &quot;mouseout&quot;:
+    MouseListener().fireMouseEvent(self.mouseListeners, self, event)
+</pre>
+<p>That should give you a slider which now accepts mouse drag-move events, making it that little bit much more useful than one which deals in single-clicks.  Once you've done that, of course, you might want to remove the onClick() altogether, because of course a single-click is also a mouse-down followed by a mouse-up event, often, in many cases, accompanied by intermediate but very brief mouse-move events.  The end-result will be doubling- or possibly tripling- or more of value change notifications, all redundant, and all wasting CPU cycles.</p>
+<p>Once you've done <em>that</em>, you might also wish to improve the widget further by detecting whether or not the mouse position was <em>actually</em> changed.  Otherwise, you may end up with entirely unnecessary calls to onControlValueChanged().  Don't be tempted to short-cut the process by doing &quot;if new_value != old_value&quot;, although this is, strictly speaking, needed as well.  Record the old mouse position on mouse-down, and only start sending onControlValueChanged() notifications when the mouse &quot;y&quot; position differs from this recorded value.</p>
+</div>
+<div class="section" id="further-enhancements-and-considerations">
+<h1>Further enhancements and considerations</h1>
+<p>As part of a c++ widget set I helped develop and maintain in 1992 we had &quot;ganging&quot; sliders, which were for Stereo Volume control. We created a &quot;container&quot; widget which allowed us to receive value changes from an arbitrary number of &quot;Control&quot; widgets placed within it.  The &quot;difference&quot; between the old and new values were very important: we utilised these to make changes to the other volume slider, allowing users to set the Left volume slightly higher or lower than the Right volume, and then, on selecting the &quot;Ganging&quot; switch, both volumes would waggle up and down by the same amount, without mashing up to the same absolute value: an undesirable oversight.</p>
+<p>We had quite a lot of fun making test applications with half a dozen sliders and dials, waggling one and watching the rest go bananas. Given that this was running on 386sx 25mhz systems, it was also quite impressive.  As it was a real-time (single-process!) application, we had to pay particular attention to ensuring that the priority was on getting the volume values to the DSP as fast as possible, leaving visual changes as the absolute last priority-queued event. Yes, we have a message-event system, like in Windows 3.1, except we added &quot;priority&quot; to it, thus avoiding the need for threading and still giving the application both responsiveness as well as aural and visually accurate representation.</p>
+<p>Any good &quot;Control&quot; widget system should keep these principles and lessons in mind.</p>
+</div>
+<div class="section" id="advanced-widgets">
+<h1>Advanced Widgets</h1>
+<p>So, you read this tutorial: you went wow, big deal: my imagination is now unlimited by the wondrous possibilities of being able to manipulate the DOM model of a &quot;page&quot; - a screen - in a quick and easy fashion.  However, my requirements are beyond what &quot;DOM model&quot; can handle.  I want video.  I want 2D graphics.  I want 3D graphics.  What do I do?</p>
+<p>There are two answers.  The first one is: if your project requires advanced 2D graphics manipulation, there is always the SVG Canvas, if you have a web browser that can support SVG.  The Pyjamas &quot;Canvas&quot; widget has been ported from the GWT Addons, and it works very well. Pyjamas-Desktop does not at the moment support SVG, however it is on the Roadmap.</p>
+<p>Your second <em>really</em> &quot;far out&quot; option - given that the underlying technology is web-browser-based - is to use Web Plugins. For Safari, Netscape, Firefox and WebKit (the last in the case of Pyjamas-Desktop), you can write a plugin that conforms to the NPAPI standard, and you're away.  I recommend that you start with the Adobe Flash plugin source code.</p>
+<p>But, before you go writing your own 3D, Video or other Multimedia plugin, first check to see whether there is an existing NPAPI or existing Web-based plugin that you can place into an iframe or otherwise embed into a page.  Can you write the plugin in Java, and run a Java applet in your page?  Can you use Adobe Flash?  All of these possibilites are open to you, with no extra particularly complex programming.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Pyjs</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css"/>
+</head>
+
+<body>
+<div id="menu">
+    <div id="logo"><img src="assets/images/pyjs.128x128.png" alt="pyjs" /></div>
+    
+<ul class="simple">
+<li><a class="reference external" href="About.html">About</a></li>
+<li><a class="reference external" href="Overview.html">Overview</a></li>
+<li><a class="reference external" href="Features.html">Features</a></li>
+<li><a class="reference external" href="Translator.html">Translator</a></li>
+<li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
+<li><a class="reference external" href="GettingHelp.html">Getting Help</a></li>
+<li><a class="reference external" href="Developing.html">Developing</a></li>
+<li class="section">Documentation</li>
+<li><a class="reference external" href="UIHierarchy.html">UI Hierarchy</a></li>
+<li><a class="reference external" href="api">API Docs</a></li>
+<li><a class="reference external" href="FAQ.html">FAQ</a></li>
+</ul>
+
+</div>
+<div id="body">
+<h1 class="title">The ui Module Class Hierarchy</h1>
+<p>The <tt class="docutils literal">ui</tt> module defines the classes shown in the diagram, below.  All user-interface widgets that will place something on-screen are derived from UIObject. Anything which takes keyboard as well as mouse input is derived from FocusWidget; except for Tree, TabPanel, TabBar and MenuBar, all classes that can contain other widgets are derived from Panel.</p>
+<p>Classes derived from SimplePanel can have one widget added to them.  Typically they take the widget as the argument to their constructor,  or you use setWidget().  Classes derived from ComplexPanel can have zero
+or more widgets: they all have add() functions which take no other arguments, except for AbsolutePanel which takes two optional x,y coordinates and DockPanel which takes a zone argument (North, South etc.)</p>
+<p>HTMLPanel and its derivative classes, Grid and FlexTable are slightly different, again, in that their add() functions all take row,column arguments.  They also provide Row and Column formatting, so that, in the case of FlexTable, you can indicate that a cell should span additional rows and/or columns.</p>
+<img alt="UI Class Hierarchy" class="align-center" src="http://pyjs.org/img/UIClassHierarchy.png" style="width: 1059px; height: 702px;" />
+</div>
+</body>
+</html>
