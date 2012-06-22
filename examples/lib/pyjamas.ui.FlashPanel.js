@@ -1,13 +1,13 @@
 /* start module: pyjamas.ui.FlashPanel */
-$pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
-	if($pyjs.loaded_modules['pyjamas.ui.FlashPanel'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.FlashPanel'];
-	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) $p['___import___']('pyjamas.ui', null);
-	var $m = $pyjs.loaded_modules["pyjamas.ui.FlashPanel"];
-	$m.__repr__ = function() { return "<module: pyjamas.ui.FlashPanel>"; };
-	$m.__was_initialized__ = true;
+$pyjs['loaded_modules']['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
+	if($pyjs['loaded_modules']['pyjamas.ui.FlashPanel']['__was_initialized__']) return $pyjs['loaded_modules']['pyjamas.ui.FlashPanel'];
+	if(typeof $pyjs['loaded_modules']['pyjamas.ui'] == 'undefined' || !$pyjs['loaded_modules']['pyjamas.ui']['__was_initialized__']) $p['___import___']('pyjamas.ui', null);
+	var $m = $pyjs['loaded_modules']['pyjamas.ui.FlashPanel'];
+	$m['__repr__'] = function() { return '<module: pyjamas.ui.FlashPanel>'; };
+	$m['__was_initialized__'] = true;
 	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.FlashPanel';
-	$m.__name__ = __mod_name__;
-	$pyjs.loaded_modules['pyjamas.ui']['FlashPanel'] = $pyjs.loaded_modules['pyjamas.ui.FlashPanel'];
+	$m['__name__'] = __mod_name__;
+	$pyjs['loaded_modules']['pyjamas.ui']['FlashPanel'] = $pyjs['loaded_modules']['pyjamas.ui.FlashPanel'];
 	try {
 		var $bool1,$bool2;
 
@@ -17,62 +17,62 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 		if ((($bool2=!(($bool1=$p['getattr']($m['pyjd'], 'is_desktop')) === null || $bool1 === false || $bool1 === 0 || $bool1 === '' ?
 			false :
 			(typeof $bool1=='object'?
-				(typeof $bool1.__nonzero__=='function'?
-					$bool1.__nonzero__() :
-					(typeof $bool1.__len__=='function'?
-						($bool1.__len__()>0 ?
+				(typeof $bool1['__nonzero__']=='function'?
+					$bool1['__nonzero__']() :
+					(typeof $bool1['__len__']=='function'?
+						($bool1['__len__']()>0 ?
 							true :
 							false) :
 						true ) ) :
 				 true ) )) === null || $bool2 === false || $bool2 === 0 || $bool2 === '' ?
 				false :
 				(typeof $bool2=='object'?
-					(typeof $bool2.__nonzero__=='function'?
-						$bool2.__nonzero__() :
-						(typeof $bool2.__len__=='function'?
-							($bool2.__len__()>0 ?
+					(typeof $bool2['__nonzero__']=='function'?
+						$bool2['__nonzero__']() :
+						(typeof $bool2['__len__']=='function'?
+							($bool2['__len__']()>0 ?
 								true :
 								false) :
 							true ) ) :
 					 true ) )) {
 		}
 		$m['browser'] = function() {
-			if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 0, 0, arguments.length);
+			if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 0, 0, arguments['length']);
 
 			return 'w3c';
 		};
-		$m['browser'].__name__ = 'browser';
+		$m['browser']['__name__'] = 'browser';
 
-		$m['browser'].__bind_type__ = 0;
-		$m['browser'].__args__ = [null,null];
+		$m['browser']['__bind_type__'] = 0;
+		$m['browser']['__args__'] = [null,null];
 		$m['FlashPanel'] = (function(){
 			var $cls_definition = new Object();
 			var $method;
-			$cls_definition.__module__ = 'pyjamas.ui.FlashPanel';
-			$cls_definition.__md5__ = '8ba9b5d6e278b36cf8d2e78b224da0b1';
+			$cls_definition['__module__'] = 'pyjamas.ui.FlashPanel';
+			$cls_definition['__md5__'] = '8ba9b5d6e278b36cf8d2e78b224da0b1';
 			$method = $pyjs__bind_method2('__init__', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					var kwargs = arguments.length >= 1 ? arguments[arguments.length-1] : arguments[arguments.length];
-					if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
-						var kwargs = arguments[arguments.length+1];
+					var kwargs = arguments['length'] >= 1 ? arguments[arguments['length']-1] : arguments[arguments['length']];
+					if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+						var kwargs = arguments[arguments['length']+1];
 					} else {
 						delete kwargs['$pyjs_is_kwarg'];
 					}
-					if ($pyjs.options.arg_count && (arguments.length < 0 || arguments.length > 1)) $pyjs__exception_func_param(arguments.callee.__name__, 1, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && (arguments['length'] < 0 || arguments['length'] > 1)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					var kwargs = arguments.length >= 2 ? arguments[arguments.length-1] : arguments[arguments.length];
-					if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
-						kwargs = arguments[arguments.length+1];
+					var kwargs = arguments['length'] >= 2 ? arguments[arguments['length']-1] : arguments[arguments['length']];
+					if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+						kwargs = arguments[arguments['length']+1];
 					} else {
 						delete kwargs['$pyjs_is_kwarg'];
 					}
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && (arguments.length < 1 || arguments.length > 2)) $pyjs__exception_func_param(arguments.callee.__name__, 1, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 2)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -91,35 +91,35 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				var element;
 				element = $m['DOM']['createDiv']();
 				self['setElement'](element);
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_id', 'FlashObject') : $p['setattr'](self, 'object_id', 'FlashObject'); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_class', null) : $p['setattr'](self, 'object_class', null); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_width', null) : $p['setattr'](self, 'object_width', null); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_height', null) : $p['setattr'](self, 'object_height', null); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('flash_url', null) : $p['setattr'](self, 'flash_url', null); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('wmode', null) : $p['setattr'](self, 'wmode', null); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('quality', 'high') : $p['setattr'](self, 'quality', 'high'); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('menu', null) : $p['setattr'](self, 'menu', null); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('allowScriptAccess', 'always') : $p['setattr'](self, 'allowScriptAccess', 'always'); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('allowFullscreen', 'false') : $p['setattr'](self, 'allowFullscreen', 'false'); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('bgColor', '#FFFFFF') : $p['setattr'](self, 'bgColor', '#FFFFFF'); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('flashvars', '') : $p['setattr'](self, 'flashvars', ''); 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('browser', $m['browser']()) : $p['setattr'](self, 'browser', $m['browser']()); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_id', 'FlashObject') : $p['setattr'](self, 'object_id', 'FlashObject'); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_class', null) : $p['setattr'](self, 'object_class', null); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_width', null) : $p['setattr'](self, 'object_width', null); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_height', null) : $p['setattr'](self, 'object_height', null); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('flash_url', null) : $p['setattr'](self, 'flash_url', null); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('wmode', null) : $p['setattr'](self, 'wmode', null); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('quality', 'high') : $p['setattr'](self, 'quality', 'high'); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('menu', null) : $p['setattr'](self, 'menu', null); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('allowScriptAccess', 'always') : $p['setattr'](self, 'allowScriptAccess', 'always'); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('allowFullscreen', 'false') : $p['setattr'](self, 'allowFullscreen', 'false'); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('bgColor', '#FFFFFF') : $p['setattr'](self, 'bgColor', '#FFFFFF'); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('flashvars', '') : $p['setattr'](self, 'flashvars', ''); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('browser', $m['browser']()) : $p['setattr'](self, 'browser', $m['browser']()); 
 				$pyjs_kwargs_call($m['Panel'], '__init__', null, kwargs, [{}, self]);
 				return null;
 			}
 	, 1, [null,['kwargs'],['self']]);
 			$cls_definition['__init__'] = $method;
 			$method = $pyjs__bind_method2('onLoad', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -132,16 +132,16 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['onLoad'] = $method;
 			$method = $pyjs__bind_method2('getObjectID', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -153,39 +153,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getObjectID'] = $method;
 			$method = $pyjs__bind_method2('setObjectID', function(object_id) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					object_id = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_id', object_id) : $p['setattr'](self, 'object_id', object_id); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_id', object_id) : $p['setattr'](self, 'object_id', object_id); 
 				return null;
 			}
 	, 1, [null,null,['self'],['object_id']]);
 			$cls_definition['setObjectID'] = $method;
 			$method = $pyjs__bind_method2('getObjectClass', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -197,39 +197,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getObjectClass'] = $method;
 			$method = $pyjs__bind_method2('setObjectClass', function(object_class) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					object_class = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_class', object_class) : $p['setattr'](self, 'object_class', object_class); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_class', object_class) : $p['setattr'](self, 'object_class', object_class); 
 				return null;
 			}
 	, 1, [null,null,['self'],['object_class']]);
 			$cls_definition['setObjectClass'] = $method;
 			$method = $pyjs__bind_method2('getObjectWidth', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -241,39 +241,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getObjectWidth'] = $method;
 			$method = $pyjs__bind_method2('setObjectWidth', function(width) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					width = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_width', $p['str'](width)) : $p['setattr'](self, 'object_width', $p['str'](width)); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_width', $p['str'](width)) : $p['setattr'](self, 'object_width', $p['str'](width)); 
 				return null;
 			}
 	, 1, [null,null,['self'],['width']]);
 			$cls_definition['setObjectWidth'] = $method;
 			$method = $pyjs__bind_method2('getObjectHeight', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -285,39 +285,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getObjectHeight'] = $method;
 			$method = $pyjs__bind_method2('setObjectHeight', function(height) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					height = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('object_height', $p['str'](height)) : $p['setattr'](self, 'object_height', $p['str'](height)); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('object_height', $p['str'](height)) : $p['setattr'](self, 'object_height', $p['str'](height)); 
 				return null;
 			}
 	, 1, [null,null,['self'],['height']]);
 			$cls_definition['setObjectHeight'] = $method;
 			$method = $pyjs__bind_method2('getFlashUrl', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -329,39 +329,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getFlashUrl'] = $method;
 			$method = $pyjs__bind_method2('setFlashUrl', function(flash_url) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					flash_url = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('flash_url', flash_url) : $p['setattr'](self, 'flash_url', flash_url); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('flash_url', flash_url) : $p['setattr'](self, 'flash_url', flash_url); 
 				return null;
 			}
 	, 1, [null,null,['self'],['flash_url']]);
 			$cls_definition['setFlashUrl'] = $method;
 			$method = $pyjs__bind_method2('getWmode', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -373,39 +373,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getWmode'] = $method;
 			$method = $pyjs__bind_method2('setWmode', function(wmode) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					wmode = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('wmode', wmode) : $p['setattr'](self, 'wmode', wmode); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('wmode', wmode) : $p['setattr'](self, 'wmode', wmode); 
 				return null;
 			}
 	, 1, [null,null,['self'],['wmode']]);
 			$cls_definition['setWmode'] = $method;
 			$method = $pyjs__bind_method2('getQuality', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -417,39 +417,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getQuality'] = $method;
 			$method = $pyjs__bind_method2('setQuality', function(quality) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					quality = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('quality', quality) : $p['setattr'](self, 'quality', quality); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('quality', quality) : $p['setattr'](self, 'quality', quality); 
 				return null;
 			}
 	, 1, [null,null,['self'],['quality']]);
 			$cls_definition['setQuality'] = $method;
 			$method = $pyjs__bind_method2('getMenu', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -459,10 +459,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool3=$p['op_eq']($p['getattr'](self, 'menu'), 'true')) === null || $bool3 === false || $bool3 === 0 || $bool3 === '' ?
 						false :
 						(typeof $bool3=='object'?
-							(typeof $bool3.__nonzero__=='function'?
-								$bool3.__nonzero__() :
-								(typeof $bool3.__len__=='function'?
-									($bool3.__len__()>0 ?
+							(typeof $bool3['__nonzero__']=='function'?
+								$bool3['__nonzero__']() :
+								(typeof $bool3['__len__']=='function'?
+									($bool3['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -477,17 +477,17 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getMenu'] = $method;
 			$method = $pyjs__bind_method2('setMenu', function(menu) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					menu = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -497,34 +497,34 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool4=menu) === null || $bool4 === false || $bool4 === 0 || $bool4 === '' ?
 						false :
 						(typeof $bool4=='object'?
-							(typeof $bool4.__nonzero__=='function'?
-								$bool4.__nonzero__() :
-								(typeof $bool4.__len__=='function'?
-									($bool4.__len__()>0 ?
+							(typeof $bool4['__nonzero__']=='function'?
+								$bool4['__nonzero__']() :
+								(typeof $bool4['__len__']=='function'?
+									($bool4['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
 							 true ) )) {
-					self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('menu', 'true') : $p['setattr'](self, 'menu', 'true'); 
+					self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('menu', 'true') : $p['setattr'](self, 'menu', 'true'); 
 				}
 				else {
-					self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('menu', 'false') : $p['setattr'](self, 'menu', 'false'); 
+					self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('menu', 'false') : $p['setattr'](self, 'menu', 'false'); 
 				}
 				return null;
 			}
 	, 1, [null,null,['self'],['menu']]);
 			$cls_definition['setMenu'] = $method;
 			$method = $pyjs__bind_method2('getAllowFullscreen', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -534,10 +534,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool5=$p['op_eq']($p['getattr'](self, 'allowFullscreen'), 'true')) === null || $bool5 === false || $bool5 === 0 || $bool5 === '' ?
 						false :
 						(typeof $bool5=='object'?
-							(typeof $bool5.__nonzero__=='function'?
-								$bool5.__nonzero__() :
-								(typeof $bool5.__len__=='function'?
-									($bool5.__len__()>0 ?
+							(typeof $bool5['__nonzero__']=='function'?
+								$bool5['__nonzero__']() :
+								(typeof $bool5['__len__']=='function'?
+									($bool5['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -552,17 +552,17 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getAllowFullscreen'] = $method;
 			$method = $pyjs__bind_method2('setAllowFullscreen', function(allowFullscreen) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					allowFullscreen = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -572,34 +572,34 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool6=allowFullscreen) === null || $bool6 === false || $bool6 === 0 || $bool6 === '' ?
 						false :
 						(typeof $bool6=='object'?
-							(typeof $bool6.__nonzero__=='function'?
-								$bool6.__nonzero__() :
-								(typeof $bool6.__len__=='function'?
-									($bool6.__len__()>0 ?
+							(typeof $bool6['__nonzero__']=='function'?
+								$bool6['__nonzero__']() :
+								(typeof $bool6['__len__']=='function'?
+									($bool6['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
 							 true ) )) {
-					self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('allowFullscreen', 'true') : $p['setattr'](self, 'allowFullscreen', 'true'); 
+					self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('allowFullscreen', 'true') : $p['setattr'](self, 'allowFullscreen', 'true'); 
 				}
 				else {
-					self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('allowFullscreen', 'false') : $p['setattr'](self, 'allowFullscreen', 'false'); 
+					self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('allowFullscreen', 'false') : $p['setattr'](self, 'allowFullscreen', 'false'); 
 				}
 				return null;
 			}
 	, 1, [null,null,['self'],['allowFullscreen']]);
 			$cls_definition['setAllowFullscreen'] = $method;
 			$method = $pyjs__bind_method2('getBGColor', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -611,39 +611,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getBGColor'] = $method;
 			$method = $pyjs__bind_method2('setBGColor', function(bgcolor) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					bgcolor = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('bgColor', bgcolor) : $p['setattr'](self, 'bgColor', bgcolor); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('bgColor', bgcolor) : $p['setattr'](self, 'bgColor', bgcolor); 
 				return null;
 			}
 	, 1, [null,null,['self'],['bgcolor']]);
 			$cls_definition['setBGColor'] = $method;
 			$method = $pyjs__bind_method2('getFlashVars', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -655,39 +655,39 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getFlashVars'] = $method;
 			$method = $pyjs__bind_method2('setFlashVars', function(flashvars) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					flashvars = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
 
-				self.__is_instance__ && typeof self.__setattr__ == 'function' ? self.__setattr__('flashvars', flashvars) : $p['setattr'](self, 'flashvars', flashvars); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('flashvars', flashvars) : $p['setattr'](self, 'flashvars', flashvars); 
 				return null;
 			}
 	, 1, [null,null,['self'],['flashvars']]);
 			$cls_definition['setFlashVars'] = $method;
 			$method = $pyjs__bind_method2('__getFlashHTML', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -702,10 +702,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool7=$p['getattr'](self, 'object_width')) === null || $bool7 === false || $bool7 === 0 || $bool7 === '' ?
 						false :
 						(typeof $bool7=='object'?
-							(typeof $bool7.__nonzero__=='function'?
-								$bool7.__nonzero__() :
-								(typeof $bool7.__len__=='function'?
-									($bool7.__len__()>0 ?
+							(typeof $bool7['__nonzero__']=='function'?
+								$bool7['__nonzero__']() :
+								(typeof $bool7['__len__']=='function'?
+									($bool7['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -721,10 +721,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool8=$p['getattr'](self, 'object_height')) === null || $bool8 === false || $bool8 === 0 || $bool8 === '' ?
 						false :
 						(typeof $bool8=='object'?
-							(typeof $bool8.__nonzero__=='function'?
-								$bool8.__nonzero__() :
-								(typeof $bool8.__len__=='function'?
-									($bool8.__len__()>0 ?
+							(typeof $bool8['__nonzero__']=='function'?
+								$bool8['__nonzero__']() :
+								(typeof $bool8['__len__']=='function'?
+									($bool8['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -740,10 +740,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool9=$p['getattr'](self, 'object_class')) === null || $bool9 === false || $bool9 === 0 || $bool9 === '' ?
 						false :
 						(typeof $bool9=='object'?
-							(typeof $bool9.__nonzero__=='function'?
-								$bool9.__nonzero__() :
-								(typeof $bool9.__len__=='function'?
-									($bool9.__len__()>0 ?
+							(typeof $bool9['__nonzero__']=='function'?
+								$bool9['__nonzero__']() :
+								(typeof $bool9['__len__']=='function'?
+									($bool9['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -759,10 +759,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool10=$p['op_eq']($p['getattr'](self, 'browser'), 'ie')) === null || $bool10 === false || $bool10 === 0 || $bool10 === '' ?
 						false :
 						(typeof $bool10=='object'?
-							(typeof $bool10.__nonzero__=='function'?
-								$bool10.__nonzero__() :
-								(typeof $bool10.__len__=='function'?
-									($bool10.__len__()>0 ?
+							(typeof $bool10['__nonzero__']=='function'?
+								$bool10['__nonzero__']() :
+								(typeof $bool10['__len__']=='function'?
+									($bool10['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -787,10 +787,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool11=$p['getattr'](self, 'flash_url')) === null || $bool11 === false || $bool11 === 0 || $bool11 === '' ?
 						false :
 						(typeof $bool11=='object'?
-							(typeof $bool11.__nonzero__=='function'?
-								$bool11.__nonzero__() :
-								(typeof $bool11.__len__=='function'?
-									($bool11.__len__()>0 ?
+							(typeof $bool11['__nonzero__']=='function'?
+								$bool11['__nonzero__']() :
+								(typeof $bool11['__len__']=='function'?
+									($bool11['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -804,10 +804,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool12=$p['getattr'](self, 'quality')) === null || $bool12 === false || $bool12 === 0 || $bool12 === '' ?
 						false :
 						(typeof $bool12=='object'?
-							(typeof $bool12.__nonzero__=='function'?
-								$bool12.__nonzero__() :
-								(typeof $bool12.__len__=='function'?
-									($bool12.__len__()>0 ?
+							(typeof $bool12['__nonzero__']=='function'?
+								$bool12['__nonzero__']() :
+								(typeof $bool12['__len__']=='function'?
+									($bool12['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -821,10 +821,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool13=!$p['op_eq']($p['getattr'](self, 'allowScriptAccess'), null)) === null || $bool13 === false || $bool13 === 0 || $bool13 === '' ?
 						false :
 						(typeof $bool13=='object'?
-							(typeof $bool13.__nonzero__=='function'?
-								$bool13.__nonzero__() :
-								(typeof $bool13.__len__=='function'?
-									($bool13.__len__()>0 ?
+							(typeof $bool13['__nonzero__']=='function'?
+								$bool13['__nonzero__']() :
+								(typeof $bool13['__len__']=='function'?
+									($bool13['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -838,10 +838,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool14=!$p['op_eq']($p['getattr'](self, 'allowFullscreen'), null)) === null || $bool14 === false || $bool14 === 0 || $bool14 === '' ?
 						false :
 						(typeof $bool14=='object'?
-							(typeof $bool14.__nonzero__=='function'?
-								$bool14.__nonzero__() :
-								(typeof $bool14.__len__=='function'?
-									($bool14.__len__()>0 ?
+							(typeof $bool14['__nonzero__']=='function'?
+								$bool14['__nonzero__']() :
+								(typeof $bool14['__len__']=='function'?
+									($bool14['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -855,10 +855,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool15=$p['getattr'](self, 'bgColor')) === null || $bool15 === false || $bool15 === 0 || $bool15 === '' ?
 						false :
 						(typeof $bool15=='object'?
-							(typeof $bool15.__nonzero__=='function'?
-								$bool15.__nonzero__() :
-								(typeof $bool15.__len__=='function'?
-									($bool15.__len__()>0 ?
+							(typeof $bool15['__nonzero__']=='function'?
+								$bool15['__nonzero__']() :
+								(typeof $bool15['__len__']=='function'?
+									($bool15['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -872,10 +872,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool16=!$p['op_eq']($p['getattr'](self, 'wmode'), null)) === null || $bool16 === false || $bool16 === 0 || $bool16 === '' ?
 						false :
 						(typeof $bool16=='object'?
-							(typeof $bool16.__nonzero__=='function'?
-								$bool16.__nonzero__() :
-								(typeof $bool16.__len__=='function'?
-									($bool16.__len__()>0 ?
+							(typeof $bool16['__nonzero__']=='function'?
+								$bool16['__nonzero__']() :
+								(typeof $bool16['__len__']=='function'?
+									($bool16['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -889,10 +889,10 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 				if ((($bool17=!$p['op_eq']($p['getattr'](self, 'menu'), null)) === null || $bool17 === false || $bool17 === 0 || $bool17 === '' ?
 						false :
 						(typeof $bool17=='object'?
-							(typeof $bool17.__nonzero__=='function'?
-								$bool17.__nonzero__() :
-								(typeof $bool17.__len__=='function'?
-									($bool17.__len__()>0 ?
+							(typeof $bool17['__nonzero__']=='function'?
+								$bool17['__nonzero__']() :
+								(typeof $bool17['__len__']=='function'?
+									($bool17['__len__']()>0 ?
 										true :
 										false) :
 									true ) ) :
@@ -916,16 +916,16 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['__getFlashHTML'] = $method;
 			$method = $pyjs__bind_method2('getMovieElement', function() {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 0) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
 				} else {
 					var self = arguments[0];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 1, 1, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -938,24 +938,24 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self']]);
 			$cls_definition['getMovieElement'] = $method;
 			$method = $pyjs__bind_method2('callFlash', function(functionName, $$arguments) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && (arguments.length < 1 || arguments.length > 2)) $pyjs__exception_func_param(arguments.callee.__name__, 2, 3, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 2)) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 3, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					functionName = arguments[1];
 					$$arguments = arguments[2];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && (arguments.length < 2 || arguments.length > 3)) $pyjs__exception_func_param(arguments.callee.__name__, 2, 3, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && (arguments['length'] < 2 || arguments['length'] > 3)) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 3, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
 					}
 				}
-				if (typeof $$arguments == 'undefined') $$arguments=arguments.callee.__args__[4][1];
+				if (typeof $$arguments == 'undefined') $$arguments=arguments['callee']['__args__'][4][1];
 				var $$arguments;
 				throw ($p['NotImplemented']('calling of javascript and conversion of javascript parameters is required'));
 				return null;
@@ -963,17 +963,17 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self'],['functionName'],['$$arguments', $p['list']([])]]);
 			$cls_definition['callFlash'] = $method;
 			$method = $pyjs__bind_method2('toJS', function(list_or_dict) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 1) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					list_or_dict = arguments[1];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 2, 2, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -986,18 +986,18 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 	, 1, [null,null,['self'],['list_or_dict']]);
 			$cls_definition['toJS'] = $method;
 			$method = $pyjs__bind_method2('flashArgumentsToXML', function($$arguments, num) {
-				if (this.__is_instance__ === true) {
+				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs.options.arg_count && arguments.length != 2) $pyjs__exception_func_param(arguments.callee.__name__, 3, 3, arguments.length+1);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 3, 3, arguments['length']+1);
 				} else {
 					var self = arguments[0];
 					$$arguments = arguments[1];
 					num = arguments[2];
-					if ($pyjs.options.arg_is_instance && self.__is_instance__ !== true) $pyjs__exception_func_instance_expected(arguments.callee.__name__, arguments.callee.__class__.__name__, self);
-					if ($pyjs.options.arg_count && arguments.length != 3) $pyjs__exception_func_param(arguments.callee.__name__, 3, 3, arguments.length);
+					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
+					if ($pyjs['options']['arg_count'] && arguments['length'] != 3) $pyjs__exception_func_param(arguments['callee']['__name__'], 3, 3, arguments['length']);
 				}
-				if ($pyjs.options.arg_instance_type) {
-					if (self.prototype.__md5__ !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
+				if ($pyjs['options']['arg_instance_type']) {
+					if (self.prototype['__md5__'] !== '8ba9b5d6e278b36cf8d2e78b224da0b1') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -1012,7 +1012,7 @@ $pyjs.loaded_modules['pyjamas.ui.FlashPanel'] = function (__mod_name__) {
 			$cls_definition['flashArgumentsToXML'] = $method;
 			var $bases = new Array($m['Panel']);
 			var $data = $p['dict']();
-			for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+			for (var $item in $cls_definition) { $data['__setitem__']($item, $cls_definition[$item]); }
 			return $p['_create_class']('FlashPanel', $p['tuple']($bases), $data);
 		})();
 	} catch ($pyjs_attr_err) {throw $p['_errorMapping']($pyjs_attr_err);};
