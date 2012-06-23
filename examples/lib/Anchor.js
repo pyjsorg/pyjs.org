@@ -26,7 +26,7 @@ $pyjs['loaded_modules']['Anchor'] = function (__mod_name__) {
 					 true ) )) {
 			$m['pyjd']['setup']('public/Anchor.html');
 			$m['root'] = $m['RootPanel']();
-			$m['image'] = $m['Image']('http://pyjs.org/img/pyjamas.128x128.png');
+			$m['image'] = $m['Image']('http://pyjs.org/assets/images/pyjs.128x128.png');
 			$m['anchor'] = $pyjs_kwargs_call(null, $m['Anchor'], null, null, [{'Widget':$m['image'], 'Href':'http://pyjs.org', 'Title':'Pyjs website'}]);
 			$m['root']['add']($m['anchor']);
 			$m['pyjd']['run']();
