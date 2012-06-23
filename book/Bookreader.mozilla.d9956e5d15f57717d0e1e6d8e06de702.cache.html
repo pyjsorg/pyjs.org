@@ -1,3 +1,57 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script><!--
+var $wnd = parent;
+var $doc = $wnd['document'];
+var $moduleName = "Bookreader";
+var $pyjs = new Object();
+var $p = null;
+$pyjs['global_namespace'] = this;
+$pyjs['__modules__'] = {};
+$pyjs['loaded_modules'] = {};
+$pyjs['options'] = new Object();
+$pyjs['options']['arg_ignore'] = true;
+$pyjs['options']['arg_count'] = true;
+$pyjs['options']['arg_is_instance'] = true;
+$pyjs['options']['arg_instance_type'] = true;
+$pyjs['options']['arg_kwarg_dup'] = true;
+$pyjs['options']['arg_kwarg_unexpected_keyword'] = true;
+$pyjs['options']['arg_kwarg_multiple_values'] = true;
+$pyjs['options']['dynamic_loading'] = false;
+$pyjs['trackstack'] = [];
+$pyjs['track'] = {'module':'__main__', 'lineno': 1};
+$pyjs['trackstack']['push']($pyjs['track']);
+$pyjs['__active_exception_stack__'] = null;
+$pyjs['__last_exception_stack__'] = null;
+$pyjs['__last_exception__'] = null;
+$pyjs['in_try_except'] = 0;
+
+/*
+ * prepare app system vars
+ */
+$pyjs['platform'] = 'mozilla';
+$pyjs['appname'] = 'Bookreader';
+$pyjs['loadpath'] = './';
+
+// For google closure compiler:
+window['$wnd'] = $wnd;
+window['$doc'] = $doc;
+window['$pyjs'] = $pyjs;
+
+
+--></script>
+
+</head>
+<body onload="if ($wnd && $wnd['__pygwt_modController']) $wnd['__pygwt_modController']['done']($pyjs['appname']);">
+<font face='arial' size='-1'>This script is part of module</font> <code>Bookreader</code>
+
+
+<!--
+/* early app libs */
+-->
+
+<script type="text/javascript"><!--
 
 var $pyjs_array_slice = Array['prototype']['slice'];
 
@@ -728,3 +782,191 @@ function $pyjs_default_args_handler($l, args, defaults_count,
     }
 }
 
+
+--></script>
+
+<!--
+/* early static js libs */
+-->
+
+
+
+<!--
+/* static js libs */
+-->
+
+
+
+<!--
+/* app libs */
+-->
+
+
+
+<!--
+/* late static js libs */
+-->
+
+
+
+<script><!--
+var wait_count = 0;
+
+var onExecutionError = function (exception, name) {
+    var extra = sys['trackstackstr']();
+    if (extra == '') {
+        if (exception['name']['indexOf']('HaltException', 0) < 0) { 
+            extra = "\n.  Rebuild with pyjsbuild -d for more information.";
+        }
+    } else {
+        extra = "\n" + extra;
+    }
+    alert( "In application " + name + " - " + 
+          exception['name'] + ': '  + exception['message'] + extra);
+};
+
+function app_imported() {
+    $p = $pyjs['loaded_modules']['pyjslib'];
+    if (typeof $p != "undefined") {
+        $p('pyjslib');
+        $pyjs['__modules__']['pyjslib'] = $p;
+        pyjslib['___import___'](
+            'Bookreader',
+            null,
+            '__main__');
+    } else {
+        var B$ = $pyjs['loaded_modules']['__builtin__'];
+        $p = B$['$dict'];
+        B$['$module_init']('__builtin__');
+        $p['_start_main']('Bookreader');
+    }
+    return;
+}
+
+function prepare_app() {
+    var startWait = 30000;
+    var diffWait = 10000;
+    var startAt = (new Date())['getTime']();
+    var waitUntil = startAt + startWait;
+    // Wait until all (dynamic) modules are loaded, and then call app_imported()
+    var wait_for_loading_modules = function ( proceed_fn, module_list ) {
+        var timeoutperiod = 100;
+        var wait = function ( ) {
+            var notLoaded = [];
+            for (var i in module_list) {
+                if (typeof $pyjs['loaded_modules'][module_list[i]] == 'undefined') {
+                    notLoaded['push'](module_list[i]);
+                }
+            }
+            if (notLoaded['length'] != 0) {
+                var now = new Date();
+                if (now['getTime']() >= waitUntil) {
+                    var msg = "Module not loaded yet: " + notLoaded['length']
+                    if (notLoaded['length'] <= 2) {
+                        msg += "\n" + notLoaded['toString']();
+                    }
+                    msg += "\n" + "Wait for missing modules?"
+                    var answer = $wnd['confirm'](msg);
+                    if (answer == false) {
+                        proceed_fn();
+                        return;
+                    }
+                    waitUntil = (new Date())['getTime']() + diffWait;
+                }
+                setTimeout(wait, timeoutperiod);
+            } else {
+                proceed_fn();
+            }
+        };
+        wait();
+    }
+    wait_for_loading_modules(app_imported, ['pyjamas.ui','pyjamas.Window','BookLoader','pyjamas.ui.InnerText','pyjamas.ui.Widget','pyjamas.ui.DockPanel','pyjamas.ui.ClickListener','pygwt','pyjamas.Location','pyjamas.ui.VerticalPanel','sys','pyjamas.ui.ChangeListener','pyjamas.ui.ScrollPanel','pyjamas','struct','Bookreader','pyjamas.Timer','binascii','pyjamas.ui.Label','SinkList','pyjamas.ui.HTMLPanel','pyjamas.HTTPRequest','getopt','pyjamas.ui.AbsolutePanel','pyjamas.ui.KeyboardListener','math','Sink','Chapter','pyjamas.ui.InputListener','pyjamas.ui.DropHandler','pyjamas.ui.Hyperlink','dynamic','pyjamas.History','pyjamas.ui.Panel','pyjamas.Factory','base64','pyjamas.ui.Composite','pyjd','pyjamas.ui.CellPanel','pyjamas.ui.MouseListener','pyjamas.ui.InnerHTML','pyjamas.ui.ComplexPanel','pyjslib','pyjamas.ui.DragHandler','pyjamas.ui.SimplePanel','traceback','pyjamas.ui.RootPanel','pyjamas.DOM','pyjamas.EventController','pyjamas.ui.HTML','pyjamas.ui.Event','pyjamas.ui.UIObject','pyjamas.ui.FocusListener']);
+}
+
+function pygwtOnLoad(onLoadError, name) {
+    if (onLoadError != null)
+        try {
+            prepare_app();
+        } catch (exception) {
+            onLoadError(exception, name);
+        }
+    else {
+        prepare_app();
+    }
+}
+window['pygwtOnLoad'] = pygwtOnLoad;
+
+$pyjs['script_onload'] = function (modname) {
+    $pyjs['loaded_modules'][modname] = function () { return null };
+}
+
+$pyjs['script_onreadystate'] = function (modname) {
+    if (js['readyState'] == 'complete') {
+        $pyjs['script_onload'](modname);
+    }
+}
+--></script>
+
+<script><!--
+$wnd['__pygwt_modController']['init']($pyjs['appname'], window)
+$wnd['__pygwt_modController']['load']($pyjs['appname'], [
+'lib/pyjamas.ui.Event.__mozilla__.165bceb21930a547700ceb8f29d96ece.js',
+'lib/pyjamas.ui.HTML.c1d6693c7e31e13ba279a5cc80042714.js',
+'lib/pyjamas.ui.MouseListener.63c598c61c064eb24235a103e23e5671.js',
+'lib/dynamic.63810c77de98fc5a24afa673939187cd.js',
+'lib/pyjamas.ui.1b1e0cf74c6355751cc820c0837e98da.js',
+'lib/pyjamas.ui.CellPanel.3b85bf243d3b73d09c8351cd644e613e.js',
+'lib/sys.5f7a1ead60afa14f7f5767d05f6fe092.js',
+'lib/pyjamas.ui.ScrollPanel.5700bfef101a725eb805c28e840ed538.js',
+'lib/pyjamas.ui.RootPanel.62cd957872350f3120f4f027f000dd16.js',
+'lib/Sink.c3aee42f98ae3c3cff1642a307e613e7.js',
+'lib/Bookreader.0e51dbd74cd87a1ebd1d0ae342488385.js',
+'lib/pyjamas.ui.InputListener.7fed3281a461e2ed2cebe1518801a56f.js',
+'lib/pyjamas.ui.Hyperlink.4476926ff781fdb52d25a70411d62950.js',
+'lib/pyjamas.ui.Panel.ed74df203aa42682987b34d100f6148e.js',
+'lib/pyjamas.Location.__mozilla__.a795e7138e89d0f4f7ab86e24e8f518c.js',
+'lib/struct.1b0bfc0ec8d51a7c030f0a86f86fe582.js',
+'lib/pyjamas.ui.KeyboardListener.2742d7f08af67be29141d871429a0805.js',
+'lib/pyjamas.5f5c30333c9992c3809de77422ce4714.js',
+'lib/pyjamas.HTTPRequest.__mozilla__.e38335e091a77d0319dfeb4ed91a2dff.js',
+'lib/pyjamas.Factory.1c1f49cde7b572f89f6d66a864044fc9.js',
+'lib/pyjamas.ui.Composite.f28f66fdf7326beb6f88d4cdc2775fae.js',
+'lib/pyjamas.EventController.e5e28da2e041be58b74302e6eab9feb9.js',
+'lib/getopt.a68b55d5c86da9b8a3ba8f787ccf7dfc.js',
+'lib/pyjamas.Window.__mozilla__.d6629af0bf5e975bc9c650adc71f765f.js',
+'lib/pyjamas.ui.DropHandler.8fb559e0cfbfcd50d4d393ac8c6c13bc.js',
+'lib/SinkList.da2da5f42924ea12a88f721f5cb60352.js',
+'lib/pyjamas.ui.AbsolutePanel.b004de6593d115133e6a1adcce5e27d0.js',
+'lib/pyjamas.ui.SimplePanel.d465685aa230ef7073ba8b59ce8475e6.js',
+'lib/pygwt.__mozilla__.4ae6b32b1d9fcfe54434536c603d12a0.js',
+'lib/BookLoader.c41fc74a5ca9cb50d9f6e8e4691942af.js',
+'lib/pyjamas.ui.Widget.13a6ed1041c7e815e4089c3415cc1c22.js',
+'lib/pyjamas.History.__mozilla__.8a9a4d29f9c9ea595a8e879a27bce9b9.js',
+'lib/pyjamas.ui.UIObject.e18f5581789539c61855d6f9b305e12a.js',
+'lib/math.1213509565c96acb012c25f5fbb48c5a.js',
+'lib/pyjamas.ui.HTMLPanel.2c7b2c4a388f315038c170563eb67924.js',
+'lib/pyjamas.ui.ComplexPanel.d4bea9360c4c376e89a2a5b6534c7f4d.js',
+'lib/pyjamas.ui.FocusListener.9bd1973c7cd040f0e5cf9c38f9e73f0e.js',
+'lib/binascii.caf7daee45154a03981b343894dda4bd.js',
+'lib/pyjamas.ui.InnerHTML.c34978534e396dad243da4c3ca95cbe4.js',
+'lib/pyjamas.ui.ClickListener.34723eb31fd86715a4b6acca9c604439.js',
+'lib/pyjamas.ui.ChangeListener.f5cf43a5304c3f7947a62bb9f0fdd64c.js',
+'lib/pyjamas.ui.Label.b991f0c485b757dd64ec9c1ac2784357.js',
+'lib/pyjd.f84584183b3cc9fa2df4261b95926c13.js',
+'lib/traceback.69a40fc4d395d9d3f99ae6482374e16b.js',
+'lib/Chapter.18b9b1488d2009e4db2797c6e30a3445.js',
+'lib/pyjamas.Timer.__mozilla__.2c76ca68ebd5822cfe41e7918a2d9b54.js',
+'lib/pyjamas.ui.InnerText.45be90f1bac7bae3c8bf7150900233f1.js',
+'lib/pyjslib.45e5de73d46748fc1270dc13322a36e0.js',
+'lib/pyjamas.ui.DragHandler.9d9a8ef4a671236ef0efd35625e5abc5.js',
+'lib/pyjamas.DOM.__mozilla__.bc9fb66977da07073a4402f42ecf3329.js',
+'lib/pyjamas.ui.DockPanel.a57dc9e287c42a0f0d8225882ec387cd.js',
+'lib/pyjamas.ui.VerticalPanel.e49e06ed8a7defb4c084083d3b044cfa.js',
+'lib/base64.9202528484aa31284b0bb9294f2e4a6d.js'
+])
+--></script>
+
+
+
+</body>
+</html>
