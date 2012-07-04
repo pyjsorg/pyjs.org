@@ -13,39 +13,43 @@
     <div id="logo"><img src="assets/images/pyjs.128x128.png" alt="pyjs" /></div>
     
 <ul class="simple">
+<li class="section">About</li>
 <li><a class="reference external" href="About.html">About</a></li>
 <li><a class="reference external" href="Overview.html">Overview</a></li>
 <li><a class="reference external" href="Features.html">Features</a></li>
 <li><a class="reference external" href="Translator.html">Translator</a></li>
-<li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
+<li><a class="reference external" href="Download.html">Download</a></li>
 <li><a class="reference external" href="GettingHelp.html">Getting Help</a></li>
-<li><a class="reference external" href="Developing.html">Developing</a></li>
 <li class="section">Documentation</li>
 <li><a class="reference external" href="examples">Examples</a></li>
 <li><a class="reference external" href="UIHierarchy.html">UI Hierarchy</a></li>
 <li><a class="reference external" href="api">API Docs</a></li>
 <li><a class="reference external" href="book/Bookreader.html">Book</a></li>
+<li class="section">Development</li>
+<li><a class="reference external" href="Developing.html">Develop</a></li>
+<li><a class="reference external" href="Deploy.html">Deploy</a></li>
+<li><a class="reference external" href="Optimize.html">Optimize</a></li>
+<li><a class="reference external" href="Contribute.html">Contribute</a></li>
+<li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
+<li class="section">Deprecated</li>
 <li><a class="reference external" href="FAQ.html">FAQ</a></li>
 </ul>
 
 </div>
 <div id="body">
+<h1 class="title">Develop</h1>
 <div class="section" id="source-code">
 <h1>Source Code</h1>
-<p>The Pyjs project repositories are now hosted <a class="reference external" href="https://github.com/pyjs">on Github</a>. For read-only access, e.g. to the main pyjs repository, use the following:</p>
+<p>The Pyjs project repositories are now hosted <a class="reference external" href="https://github.com/pyjs">on Github</a>. For read-only access, e.g. to Pyjs' main repository, use the following:</p>
 <pre class="literal-block">
 git clone https://github.com/pyjs/pyjs.git
 </pre>
-<p>If you would like write-access, please simply ask on the <a class="reference external" href="GettingHelp.html">mailing list</a> (or fork the
-project, apply your changes, and make a pull request). For developers, use the following which allows you to push to the repository once you have been added as a contributor, and you have added your ssh public key in your Github profile:</p>
-<pre class="literal-block">
-git clone git&#64;github.com:pyjs/pyjs.git
-</pre>
+<p>Contributing is easy with GitHub: Simply fork the project, apply your changes, and make a pull request. (If you are not yet familiar with GitHub, you'll find the &quot;Fork&quot; and &quot;Pull Request&quot; buttons on the top right of the Pyjs project page.) Your pull request will then be reviewed and merged into Pyjs' main repository by one of the project administrators.</p>
 </div>
 <div class="section" id="pyjs-developer-guidelines">
 <h1>Pyjs Developer Guidelines</h1>
 <p>In the Pyjs repository is a file DEVELOPER.RULES.  As long as you follow those rules, you can do what you like.  The trickiest part about Pyjs is remembering that it is several separate projects.  For example: modifying the javascript compiler has absolutely nothing to do with Pyjs Desktop.  But, modifying a Pyjs UI Widget requires testing on <strong>eight</strong> platforms (five web and three desktop) including compiling and testing using both --strict and -O on the five web platforms, and testing under nearly <strong>ten</strong> web browsers (Firefox 2 to 4; Opera 9 to 10.5; Safari 3 and 4; Google Chrome; IE 6 and above, and so on).  Clearly, this is an impossible task but you should make the best efforts and use your judgement, and ask for help on the mailing list.</p>
-<p>Lastly - please use the <a class="reference external" href="https://github.com/pyjs/pyjs/issues">bugtracker</a> to report bugs (regardless of how trivial or small); the mailing list to coordinate discussions; the <a class="reference external" href="https://github.com/pyjs/pyjs/wiki">pyjamas wiki</a> to create HOWTOs and so on.</p>
+<p>Lastly - please use the <a class="reference external" href="https://github.com/pyjs/pyjs/issues">bugtracker</a> to report bugs (regardless of how trivial or small); the mailing list to coordinate discussions; the <a class="reference external" href="https://github.com/pyjs/pyjs/wiki">Pyjs wiki</a> to create HOWTOs and so on.</p>
 </div>
 <div class="section" id="how-to-set-up-a-web-development-environment">
 <h1>How to set up a Web development environment</h1>
@@ -57,15 +61,34 @@ git clone git&#64;github.com:pyjs/pyjs.git
 <li>For Chrome, <a class="reference external" href="http://chrispederick.com/work/web-developer/">Web Developer</a> has been reported to make your life easier.</li>
 <li>Opera has stack tracing by default.</li>
 </ul>
-<p>You should also note that the Pyjs compiler has a &quot;-d&quot; option which will enable a python-like stack trace when a javascript exception occurs. The amount of javascript generated can be FIVE times larger, so only enable this during development.</p>
+<p>For debug output using Pyjs' <tt class="docutils literal">logging</tt> module is recommended (see below for details).</p>
+<p>You should also note that the Pyjs compiler has a &quot;-d&quot; option which will enable a python-like stack trace when a JavaScript exception occurs. The amount of JavaScript generated can be FIVE times larger, so only enable this during development.</p>
 <p>Lastly, it is worth reiterating that Pyjs Desktop runs as pure Python: you should give serious consideration to running the application under Pyjs Desktop alongside developing it for the browser. The availability of Python runtime stack traces and the simple fact that the standard Python interpreter is much better at catching certain kinds of errors than (brain-damaged) browsers has generally found to make life much much easier.</p>
+</div>
+<div class="section" id="debug-output">
+<h1>Debug Output</h1>
+<p>With Pyjs you can use full Python-style logging (Python's flexible <a class="reference external" href="http://docs.python.org/library/logging.html">event logging module</a> has been ported to Pyjs). Additional handlers allow you to display log messages in a dedicated <em>div</em> element in the HTML document, in the Web browser's error console, and with JavaScript's alert() function.</p>
+<pre class="literal-block">
+from pyjamas import logging
+log = logging.getConsoleLogger()   # other loggers: Alert, Append, Print ...
+...
+log.error(&quot;Hello, here is an %s error&quot;, err_name)
+</pre>
+<p>For a good understanding of the logging module read the <a class="reference external" href="http://docs.python.org/howto/logging.html">Python Logging HOWTO</a>; most of it directly applies to Pyjs. Additional loggers provided by Pyjs, and how you'd use them:</p>
+<ol class="arabic simple">
+<li>AlertLogger: <tt class="docutils literal">log = logging.getAlertLogger()</tt> shows a browser alert popup dialog for each log message.</li>
+<li>AppendLogger: <tt class="docutils literal">log = logging.getAppendLogger()</tt> appends text to the end of the HTML document body. The <em>div</em> element holding the log messages can be accessed by its element ID ('logging_&lt;loggername&gt;', which defaults to 'logging_pyjs') for styling.</li>
+<li>ConsoleLogger: <tt class="docutils literal">log = logging.getConsoleLogger()</tt> passes log messages on to the error console of Firebug/Chrome/Opera/<a class="reference external" href="http://msdn.microsoft.com/en-us/library/dd565625(v=vs.85).aspx">IE8+</a> using the <a class="reference external" href="http://getfirebug.com/logging">console logging</a> functions.</li>
+<li>PrintLogger: <tt class="docutils literal">log = logging.getPrintLogger()</tt> prints text to <em>cerr</em>, the default error output stream. This is a good choice when developing/testing with Pyjs Desktop.</li>
+<li>NullLogger: <tt class="docutils literal">log = logging.getNullLogger()</tt> disable logging completely and safely.</li>
+</ol>
 </div>
 <div class="section" id="building-user-interfaces-with-pyjs">
 <h1>Building User Interfaces with Pyjs</h1>
 <p>To become familiar with the user interface side of Pyjs, you might like to refer to the <a class="reference external" href="examples">examples</a> online and also compile and run them locally.</p>
 <p>You might find the <a class="reference external" href="UIHierarchy.html">ui module class hierarchy</a> useful. The <tt class="docutils literal">ui</tt> module contains all of the
 main classes you need to create your user interface. At first, this module can be a quite confusing because of the number of classes defined. However, there is <a class="reference external" href="api">API documentation</a>, along with a <a class="reference external" href="ControlsTutorial.html">tutorial</a> on how to create your own interactive widget.</p>
-<p>You might also have a look at the <a class="reference external" href="https://developers.google.com/web-toolkit/doc/latest/DevGuide">GWT Documentation</a> for widgets that have ported to pyjs.</p>
+<p>You might also have a look at the <a class="reference external" href="https://developers.google.com/web-toolkit/doc/latest/DevGuide">GWT Documentation</a> for widgets that have been ported to Pyjs.</p>
 </div>
 <div class="section" id="sources-overview">
 <h1>Sources Overview</h1>
@@ -92,7 +115,7 @@ main classes you need to create your user interface. At first, this module can b
 <dt>/library/gwt/</dt>
 <dd>libs tracking original gwt sources, without improvements</dd>
 <dt>/library/pyjamas/</dt>
-<dd>libs mirroring and cross-linking gwt/ ones, to add pyjamas-specific features</dd>
+<dd>libs mirroring and cross-linking gwt/ ones, to add Pyjs-specific features</dd>
 <dt>/pgen/</dt>
 <dd>Python parsing suite recoded in python</dd>
 <dt>/pygtkweb/</dt>
@@ -117,7 +140,7 @@ main classes you need to create your user interface. At first, this module can b
 <li>the &quot;/pyjs&quot; part is only used in translated mode, other libraries
 are used both for translated (browser, pyv8, pysm...) and non-translated (pyjd) modes</li>
 <li>each widget is split between &quot;/library/pyjamas/ui/&quot; and
-&quot;/library/gwt/ui/&quot; trees, to differenciate legacy and pyjamas-added features</li>
+&quot;/library/gwt/ui/&quot; trees, to differenciate legacy and Pyjs-added features</li>
 <li>for testing, &quot;/test.py&quot; and compiled &quot;/examples/libtest&quot; are your best allies</li>
 </ul>
 </div>
