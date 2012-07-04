@@ -81,7 +81,7 @@
 <a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
 <a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"> </tt>
 <a name="Polygon"></a><div id="Polygon-def"><a name="L19"></a><tt class="py-lineno">19</tt> <a class="py-toggle" href="#" id="Polygon-toggle" onclick="return toggle('Polygon');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gmaps.Polygon-module.html#Polygon">Polygon</a><tt class="py-op">(</tt><tt class="py-param">options</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
-</div><div id="Polygon-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Polygon-expanded"><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"return new $wnd.google.maps.Polygon(@{{options}})"</tt><tt class="py-op">)</tt> </tt>
+</div><div id="Polygon-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Polygon-expanded"><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"return new $wnd['google']['maps']['Polygon'](@{{options}})"</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"> </tt>
 <a name="PolygonOptions"></a><div id="PolygonOptions-def"><a name="L22"></a><tt class="py-lineno">22</tt> <a class="py-toggle" href="#" id="PolygonOptions-toggle" onclick="return toggle('PolygonOptions');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gmaps.Polygon-module.html#PolygonOptions">PolygonOptions</a><tt class="py-op">(</tt><tt class="py-param">adict</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="PolygonOptions-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="PolygonOptions-expanded"><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">    <tt class="py-docstring">"""Accepts a dictionary of options. If necessary, transforms "paths" from</tt> </tt>
@@ -100,19 +100,19 @@
 </div><div id="decodePoly-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="decodePoly-expanded"><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">    <tt class="py-docstring">"""Quickly decodes a gmaps api v2 encoded polyline... deprecated by google but still</tt> </tt>
 <a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-docstring">    a good over-the-wire compression format"""</tt> </tt>
 <a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
-<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"><tt class="py-string">    var i=-1,j=-1,k,l,q=@{{poly}}.match(/[\_-\~]*[\?-\^]/g),w=0,x=0,y=0,z=1e-5;</tt> </tt>
+<a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"><tt class="py-string">    var i=-1,j=-1,k,l,q=@{{poly}}['match'](/[\_-\~]*[\?-\^]/g),w=0,x=0,y=0,z=1e-5;</tt> </tt>
 <a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
 <a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"><tt class="py-string">    @{{poly}}=[];</tt> </tt>
 <a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
 <a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-string">    if (q) for (;;)</tt> </tt>
 <a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-string">    {</tt> </tt>
 <a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"><tt class="py-string">        if (!q[++i]) break;</tt> </tt>
-<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-string">        for (k=q[i].length,l=63,w=0;k--;l=95) w=(w&lt;&lt;5)+q[i].charCodeAt(k)-l;</tt> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"><tt class="py-string">        for (k=q[i]['length'],l=63,w=0;k--;l=95) w=(w&lt;&lt;5)+q[i]['charCodeAt'](k)-l;</tt> </tt>
 <a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"><tt class="py-string">        y+=(w&lt;&lt;31&gt;&gt;31)^(w&gt;&gt;1);</tt> </tt>
 <a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line"><tt class="py-string">        if (!q[++i]) break;</tt> </tt>
-<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-string">        for (k=q[i].length,l=63,w=0;k--;l=95) w=(w&lt;&lt;5)+q[i].charCodeAt(k)-l;</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-string">        for (k=q[i]['length'],l=63,w=0;k--;l=95) w=(w&lt;&lt;5)+q[i]['charCodeAt'](k)-l;</tt> </tt>
 <a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt class="py-string">        x+=(w&lt;&lt;31&gt;&gt;31)^(w&gt;&gt;1);</tt> </tt>
-<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"><tt class="py-string">        @{{poly}}[++j]=new $wnd.google.maps.LatLng(y*z,x*z);</tt> </tt>
+<a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"><tt class="py-string">        @{{poly}}[++j]=new $wnd['google']['maps']['LatLng'](y*z,x*z);</tt> </tt>
 <a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"><tt class="py-string">    }</tt> </tt>
 <a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"><tt class="py-string">    return @{{poly}}</tt> </tt>
 <a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"><tt class="py-string">"""</tt><tt class="py-op">)</tt> </tt>

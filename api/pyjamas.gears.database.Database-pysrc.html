@@ -154,7 +154,7 @@
 <a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
 <a name="GearsDatabase.getLastInsertRowId"></a><div id="GearsDatabase.getLastInsertRowId-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="GearsDatabase.getLastInsertRowId-toggle" onclick="return toggle('GearsDatabase.getLastInsertRowId');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.database.Database.GearsDatabase-class.html#getLastInsertRowId">getLastInsertRowId</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="GearsDatabase.getLastInsertRowId-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GearsDatabase.getLastInsertRowId-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
-<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-string">        return this.db.lastInsertRowId;</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"><tt class="py-string">        return this['db']['lastInsertRowId'];</tt> </tt>
 <a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"> </tt>
 <a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">    <tt class="py-string">"""*</tt> </tt>
@@ -173,7 +173,7 @@
 <a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
 <a name="GearsDatabase.getRowsAffected"></a><div id="GearsDatabase.getRowsAffected-def"><a name="L109"></a><tt class="py-lineno">109</tt> <a class="py-toggle" href="#" id="GearsDatabase.getRowsAffected-toggle" onclick="return toggle('GearsDatabase.getRowsAffected');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.database.Database.GearsDatabase-class.html#getRowsAffected">getRowsAffected</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="GearsDatabase.getRowsAffected-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GearsDatabase.getRowsAffected-expanded"><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
-<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-string">        return this.db.rowsAffected;</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-string">        return this['db']['rowsAffected'];</tt> </tt>
 <a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
 <a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-string">"""*</tt> </tt>
@@ -184,24 +184,24 @@
 <a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-string">    """</tt> </tt>
 <a name="GearsDatabase.open"></a><div id="GearsDatabase.open-def"><a name="L120"></a><tt class="py-lineno">120</tt> <a class="py-toggle" href="#" id="GearsDatabase.open-toggle" onclick="return toggle('GearsDatabase.open');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.database.Database.GearsDatabase-class.html#open">open</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="GearsDatabase.open-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GearsDatabase.open-expanded"><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">name</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
-<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">            <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">" this.db.open(); "</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">            <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">" this['db']['open'](); "</tt><tt class="py-op">)</tt> </tt>
 <a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
-<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">            <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">" this.db.open(@{{name}}); "</tt><tt class="py-op">)</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line">            <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">" this['db']['open'](@{{name}}); "</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"> </tt>
 <a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"> </tt>
 <a name="GearsDatabase.execute_args"></a><div id="GearsDatabase.execute_args-def"><a name="L127"></a><tt class="py-lineno">127</tt> <a class="py-toggle" href="#" id="GearsDatabase.execute_args-toggle" onclick="return toggle('GearsDatabase.execute_args');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.database.Database.GearsDatabase-class.html#execute_args">execute_args</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">sqlStatement</tt><tt class="py-op">,</tt> <tt class="py-param">args</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="GearsDatabase.execute_args-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GearsDatabase.execute_args-expanded"><a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
 <a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-string">        if (typeof @{{args}} == 'undefined') {</tt> </tt>
-<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">            return this.db.execute(@{{sqlStatement}});</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">            return this['db']['execute'](@{{sqlStatement}});</tt> </tt>
 <a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-string">        } else {</tt> </tt>
-<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">            return this.db.execute(@{{sqlStatement}}, @{{args}}.l);</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">            return this['db']['execute'](@{{sqlStatement}}, @{{args}}['l']);</tt> </tt>
 <a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">        }</tt> </tt>
 <a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
 </div><a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"> </tt>
 <a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
 <a name="GearsDatabase.uncheckedClose"></a><div id="GearsDatabase.uncheckedClose-def"><a name="L137"></a><tt class="py-lineno">137</tt> <a class="py-toggle" href="#" id="GearsDatabase.uncheckedClose-toggle" onclick="return toggle('GearsDatabase.uncheckedClose');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gears.database.Database.GearsDatabase-class.html#uncheckedClose">uncheckedClose</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="GearsDatabase.uncheckedClose-collapsed" style="display:none;" pad="+++" indent="++++++++"></div><div id="GearsDatabase.uncheckedClose-expanded"><a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
-<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-string">        this.db.close();</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-string">        this['db']['close']();</tt> </tt>
 <a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
 </div></div><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--

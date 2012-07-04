@@ -98,22 +98,22 @@
 <a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"> </tt>
 <a name="translateGmapsObject"></a><div id="translateGmapsObject-def"><a name="L35"></a><tt class="py-lineno"> 35</tt> <a class="py-toggle" href="#" id="translateGmapsObject-toggle" onclick="return toggle('translateGmapsObject');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gmaps.Utils-module.html#translateGmapsObject">translateGmapsObject</a><tt class="py-op">(</tt><tt class="py-param">obj</tt><tt class="py-op">,</tt> <tt class="py-param">fieldName</tt><tt class="py-op">,</tt> <tt class="py-param">fields</tt><tt class="py-op">,</tt> <tt class="py-param">pyToJs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="translateGmapsObject-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="translateGmapsObject-expanded"><a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
-<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">    //console.log("translateGmapsObject " + fieldNameXXX+"("+pyToJs+")")</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">    //console['log']("translateGmapsObject " + fieldNameXXX+"("+pyToJs+")")</tt> </tt>
 <a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
 <a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-string">    if (! (@{{fieldName}} in @{{fields}}))</tt> </tt>
 <a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-string">    {</tt> </tt>
-<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-string">      //console.log("nothing")</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-string">      //console['log']("nothing")</tt> </tt>
 <a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-string">      return @{{obj}};</tt> </tt>
 <a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"><tt class="py-string">    }</tt> </tt>
 <a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line"><tt class="py-string">    else{</tt> </tt>
 <a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line"><tt class="py-string">        @{{action}} = @{{fields}}[@{{fieldName}}]</tt> </tt>
-<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-string">        //console.log("action=" + action)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-string">        //console['log']("action=" + action)</tt> </tt>
 <a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
 <a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-string">        if (@{{action}} == 'd')</tt> </tt>
 <a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-string">        {</tt> </tt>
-<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">          //console.log("is dict")</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">          //console['log']("is dict")</tt> </tt>
 <a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-string">          // this newobj can be used in js and also in python,</tt> </tt>
-<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-string">          // like this "newobj.field"</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-string">          // like this "newobj['field']"</tt> </tt>
 <a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-string">          var newobj = {}</tt> </tt>
 <a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-string">          for (var i in @{{obj}})</tt> </tt>
 <a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-string">             // vai ficar disponivel como uma propriedade, no python!</tt> </tt>
@@ -125,24 +125,24 @@
 <a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"><tt class="py-string">        {</tt> </tt>
 <a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-string">          if (@{{pyToJs}}) {</tt> </tt>
 <a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-string">              var newobj = $m['listToJs'](@{{obj}})</tt> </tt>
-<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-string">              //console.log("is list py-&gt;js")</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt class="py-string">              //console['log']("is list py-&gt;js")</tt> </tt>
 <a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt class="py-string">              for (var i in newobj){</tt> </tt>
 <a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"><tt class="py-string">                 newobj[i]=$m['translateGmapsObject'](</tt> </tt>
 <a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-string">                    newobj[i], @{{fieldName}} + "[]", @{{fields}},@{{pyToJs}} ) ;</tt> </tt>
 <a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"><tt class="py-string">              }</tt> </tt>
 <a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-string">              return newobj</tt> </tt>
 <a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-string">          }else{</tt> </tt>
-<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-string">              //console.log("is list js-&gt;py")</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-string">              //console['log']("is list js-&gt;py")</tt> </tt>
 <a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-string">              var newobj = @{{list}}([])</tt> </tt>
 <a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-string">              for (var i in @{{obj}})</tt> </tt>
-<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-string">                 newobj.append($m['translateGmapsObject'](</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-string">                 newobj['append']($m['translateGmapsObject'](</tt> </tt>
 <a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-string">                     @{{obj}}[i], @{{fieldName}} + "[]", @{{fields}},@{{pyToJs}} ));</tt> </tt>
 <a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-string">              return newobj</tt> </tt>
 <a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"><tt class="py-string">          }</tt> </tt>
 <a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"><tt class="py-string">        }</tt> </tt>
 <a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-string">        else</tt> </tt>
 <a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"><tt class="py-string">        {</tt> </tt>
-<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-string">          //console.log("is special")</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line"><tt class="py-string">          //console['log']("is special")</tt> </tt>
 <a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"><tt class="py-string">          return @{{action}}(@{{obj}})</tt> </tt>
 <a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-string">        }</tt> </tt>
 <a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-string">    }</tt> </tt>
@@ -212,7 +212,7 @@
 </div><div id="__addListener-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="__addListener-expanded"><a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-name">self</tt> <tt class="py-op">=</tt> <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"this"</tt><tt class="py-op">)</tt> </tt>
 <a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"> </tt>
 <a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">    <tt class="py-name">thelist</tt> <tt class="py-op">=</tt> <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
-<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-string">       $wnd.google.maps.event.addListener(this, @{{eventName}}, function(event) {</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-string">       $wnd['google']['maps']['event']['addListener'](this, @{{eventName}}, function(event) {</tt> </tt>
 <a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-string">         @{{callback}}(event);</tt> </tt>
 <a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-string">       })</tt> </tt>
 <a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-string">    """</tt><tt class="py-op">)</tt> </tt>
@@ -233,7 +233,7 @@
 <a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"> </tt>
 <a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">eventName</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__listeners</tt><tt class="py-op">:</tt> </tt>
 <a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt class="py-name">list</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__listeners</tt><tt class="py-op">[</tt><tt class="py-name">eventName</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
-<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">            <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""$wnd.google.maps.event.removeListener(@{{list}});"""</tt><tt class="py-op">)</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line">            <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""$wnd['google']['maps']['event']['removeListener'](@{{list}});"""</tt><tt class="py-op">)</tt> </tt>
 <a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line">            <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__listeners</tt><tt class="py-op">[</tt><tt class="py-name">eventName</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Method pyjamas.DOM.IterChildrenClass.remove()=pyjamas.DOM.IterChildrenClass-class.html#remove,Method pyjamas.DOM.IterWalkChildren.remove()=pyjamas.DOM.IterWalkChildren-class.html#remove,Method pyjamas.ui.Anchor._Attribute.remove()=pyjamas.ui.Anchor._Attribute-class.html#remove,Method pyjamas.ui.BuilderPanel.BuilderPanel.remove()=pyjamas.ui.BuilderPanel.BuilderPanel-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssFile.remove()=pyjamas.ui.CSS.StyleSheetCssFile-class.html#remove,Method pyjamas.ui.CSS.StyleSheetCssText.remove()=pyjamas.ui.CSS.StyleSheetCssText-class.html#remove,Method pyjamas.ui.ComplexPanel.ComplexPanel.remove()=pyjamas.ui.ComplexPanel.ComplexPanel-class.html#remove,Method pyjamas.ui.DeckPanel.DeckPanel.remove()=pyjamas.ui.DeckPanel.DeckPanel-class.html#remove,Method pyjamas.ui.DialogBox.DialogBox.remove()=pyjamas.ui.DialogBox.DialogBox-class.html#remove,Method pyjamas.ui.DisclosurePanel.DisclosurePanel.remove()=pyjamas.ui.DisclosurePanel.DisclosurePanel-class.html#remove,Method pyjamas.ui.DockPanel.DockPanel.remove()=pyjamas.ui.DockPanel.DockPanel-class.html#remove,Method pyjamas.ui.HTMLTable.HTMLTable.remove()=pyjamas.ui.HTMLTable.HTMLTable-class.html#remove,Method pyjamas.ui.HorizontalPanel.HorizontalPanel.remove()=pyjamas.ui.HorizontalPanel.HorizontalPanel-class.html#remove,Method pyjamas.ui.SimplePanel.SimplePanel.remove()=pyjamas.ui.SimplePanel.SimplePanel-class.html#remove,Method pyjamas.ui.SplitPanel.SplitPanel.remove()=pyjamas.ui.SplitPanel.SplitPanel-class.html#remove,Method pyjamas.ui.StackPanel.StackPanel.remove()=pyjamas.ui.StackPanel.StackPanel-class.html#remove,Method pyjamas.ui.TabPanel.TabPanel.remove()=pyjamas.ui.TabPanel.TabPanel-class.html#remove,Method pyjamas.ui.Tree.Tree.remove()=pyjamas.ui.Tree.Tree-class.html#remove,Method pyjamas.ui.TreeItem.TreeItem.remove()=pyjamas.ui.TreeItem.TreeItem-class.html#remove,Method pyjamas.ui.VerticalPanel.VerticalPanel.remove()=pyjamas.ui.VerticalPanel.VerticalPanel-class.html#remove"><a title="pyjamas.DOM.IterChildrenClass.remove
 pyjamas.DOM.IterWalkChildren.remove
 pyjamas.ui.Anchor._Attribute.remove
@@ -262,7 +262,7 @@ pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick=
 <a name="__clearListeners"></a><div id="__clearListeners-def"><a name="L179"></a><tt class="py-lineno">179</tt> <a class="py-toggle" href="#" id="__clearListeners-toggle" onclick="return toggle('__clearListeners');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gmaps.Utils-module.html#__clearListeners">__clearListeners</a><tt class="py-op">(</tt><tt class="py-param">eventName</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="__clearListeners-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="__clearListeners-expanded"><a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line">    <tt class="py-name">self</tt> <tt class="py-op">=</tt> <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"this"</tt><tt class="py-op">)</tt> </tt>
 <a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"> </tt>
-<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""$wnd.google.maps.event.clearListeners(this, @{{eventName}})"""</tt><tt class="py-op">)</tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""$wnd['google']['maps']['event']['clearListeners'](this, @{{eventName}})"""</tt><tt class="py-op">)</tt> </tt>
 <a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">eventName</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__listeners</tt><tt class="py-op">:</tt> </tt>
 <a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line">        <tt class="py-keyword">del</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__listeners</tt><tt class="py-op">[</tt><tt class="py-name">eventName</tt><tt class="py-op">]</tt> </tt>
 </div><a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"> </tt>
@@ -270,7 +270,7 @@ pyjamas.ui.VerticalPanel.VerticalPanel.remove" class="py-name" href="#" onclick=
 <a name="__clearInstanceListeners"></a><div id="__clearInstanceListeners-def"><a name="L187"></a><tt class="py-lineno">187</tt> <a class="py-toggle" href="#" id="__clearInstanceListeners-toggle" onclick="return toggle('__clearInstanceListeners');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="pyjamas.gmaps.Utils-module.html#__clearInstanceListeners">__clearInstanceListeners</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
 </div><div id="__clearInstanceListeners-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="__clearInstanceListeners-expanded"><a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line">    <tt class="py-name">self</tt> <tt class="py-op">=</tt> <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"this"</tt><tt class="py-op">)</tt> </tt>
 <a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line"> </tt>
-<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""$wnd.google.maps.event.clearInstanceListeners(this)"""</tt><tt class="py-op">)</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line">    <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""$wnd['google']['maps']['event']['clearInstanceListeners'](this)"""</tt><tt class="py-op">)</tt> </tt>
 <a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__listeners</tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
 </div><a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--
