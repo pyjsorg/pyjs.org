@@ -25,6 +25,7 @@
 <li><a class="reference external" href="UIHierarchy.html">UI Hierarchy</a></li>
 <li><a class="reference external" href="api">API Docs</a></li>
 <li><a class="reference external" href="book/Bookreader.html">Book</a></li>
+<li><a class="reference external" href="https://github.com/pyjs/pyjs/wiki">Wiki</a></li>
 <li class="section">Development</li>
 <li><a class="reference external" href="Developing.html">Develop</a></li>
 <li><a class="reference external" href="Deploy.html">Deploy</a></li>
@@ -40,16 +41,11 @@
 <h1 class="title">Develop</h1>
 <div class="section" id="source-code">
 <h1>Source Code</h1>
-<p>The Pyjs project repositories are now hosted <a class="reference external" href="https://github.com/pyjs">on Github</a>. For read-only access, e.g. to Pyjs' main repository, use the following:</p>
+<p>The Pyjs project repositories are now hosted <a class="reference external" href="https://github.com/pyjs">on Github</a>. For read-only access to Pyjs' main repository use the following:</p>
 <pre class="literal-block">
 git clone https://github.com/pyjs/pyjs.git
 </pre>
-<p>Contributing is easy with GitHub: Simply fork the project, apply your changes, and make a pull request. (If you are not yet familiar with GitHub, you'll find the &quot;Fork&quot; and &quot;Pull Request&quot; buttons on the top right of the Pyjs project page.) Your pull request will then be reviewed and merged into Pyjs' main repository by one of the project administrators.</p>
-</div>
-<div class="section" id="pyjs-developer-guidelines">
-<h1>Pyjs Developer Guidelines</h1>
-<p>In the Pyjs repository is a file DEVELOPER.RULES.  As long as you follow those rules, you can do what you like.  The trickiest part about Pyjs is remembering that it is several separate projects.  For example: modifying the javascript compiler has absolutely nothing to do with Pyjs Desktop.  But, modifying a Pyjs UI Widget requires testing on <strong>eight</strong> platforms (five web and three desktop) including compiling and testing using both --strict and -O on the five web platforms, and testing under nearly <strong>ten</strong> web browsers (Firefox 2 to 4; Opera 9 to 10.5; Safari 3 and 4; Google Chrome; IE 6 and above, and so on).  Clearly, this is an impossible task but you should make the best efforts and use your judgement, and ask for help on the mailing list.</p>
-<p>Lastly - please use the <a class="reference external" href="https://github.com/pyjs/pyjs/issues">bugtracker</a> to report bugs (regardless of how trivial or small); the mailing list to coordinate discussions; the <a class="reference external" href="https://github.com/pyjs/pyjs/wiki">Pyjs wiki</a> to create HOWTOs and so on.</p>
+<p>If you want to add contributions to the project source code see <a class="reference external" href="Contribute.html">Contribute</a> for details.</p>
 </div>
 <div class="section" id="how-to-set-up-a-web-development-environment">
 <h1>How to set up a Web development environment</h1>
@@ -82,6 +78,10 @@ log.error(&quot;Hello, here is an %s error&quot;, err_name)
 <li>PrintLogger: <tt class="docutils literal">log = logging.getPrintLogger()</tt> prints text to <em>cerr</em>, the default error output stream. This is a good choice when developing/testing with Pyjs Desktop.</li>
 <li>NullLogger: <tt class="docutils literal">log = logging.getNullLogger()</tt> disable logging completely and safely.</li>
 </ol>
+<div class="section" id="enable-additional-debug-information-in-javascript">
+<h2>Enable additional debug information in JavaScript</h2>
+<p><tt class="docutils literal">pyjsbuild</tt> command line switch <tt class="docutils literal"><span class="pre">-d</span></tt>, <tt class="docutils literal"><span class="pre">--enable-debug</span></tt> generates a vast amount of extra information for every single line of code in JavaScript. This blows up your code size drastically, use it as the last resort.</p>
+</div>
 </div>
 <div class="section" id="building-user-interfaces-with-pyjs">
 <h1>Building User Interfaces with Pyjs</h1>

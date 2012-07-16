@@ -25,6 +25,7 @@
 <li><a class="reference external" href="UIHierarchy.html">UI Hierarchy</a></li>
 <li><a class="reference external" href="api">API Docs</a></li>
 <li><a class="reference external" href="book/Bookreader.html">Book</a></li>
+<li><a class="reference external" href="https://github.com/pyjs/pyjs/wiki">Wiki</a></li>
 <li class="section">Development</li>
 <li><a class="reference external" href="Developing.html">Develop</a></li>
 <li><a class="reference external" href="Deploy.html">Deploy</a></li>
@@ -38,17 +39,17 @@
 </div>
 <div id="body">
 <h1 class="title">Overview</h1>
-<p>Like GWT, Pyjs translates a Python application and libraries (including UI widgets and DOM classes) into a Javascript application and libraries, and packages it all up:</p>
+<p>Like GWT, Pyjs translates a Python application and libraries (including UI widgets and DOM classes) into a JavaScript application and libraries, and packages it all up:</p>
 <img alt="Overview of Pyjs' components" class="align-center" src="assets/images/overview.png" />
 <ol class="arabic simple">
-<li><strong>pyjs</strong> translates Python code to Javascript by walking the Python abstract syntax tree and generating Javascript.</li>
-<li><strong>pyjslib</strong> takes care of Python types that require a custom Javascript implementation for pyjs to work. For example, even though Python lists are similar to Javascript arrays, Python lists are converted to custom objects that implement methods such as <tt class="docutils literal">append</tt>.</li>
-<li><strong>UI widgets and a DOM library</strong> are provided as a convenience. They are written in Python and, like everything else, they are translated to Javascript for deployment. These are based on those in GWT.</li>
+<li><strong>pyjs</strong> translates Python code to JavaScript by walking the Python abstract syntax tree and generating JavaScript.</li>
+<li><strong>pyjslib</strong> takes care of Python types that require a custom JavaScript implementation for pyjs to work. For example, even though Python lists are similar to JavaScript arrays, Python lists are converted to custom objects that implement methods such as <tt class="docutils literal">append</tt>.</li>
+<li><strong>UI widgets and a DOM library</strong> are provided as a convenience. They are written in Python and, like everything else, they are translated to JavaScript for deployment. These are based on those in GWT.</li>
 <li><strong>build</strong> manages the overall translation of individual components and creates a set of <tt class="docutils literal">.html</tt> and <tt class="docutils literal">.js</tt> files that can be served up by a Web server.</li>
 </ol>
 <div class="section" id="hello-world">
 <h1>Hello World</h1>
-<p>The omnipresent hello world example, let's call it 'Hello Pyjs':</p>
+<p>A quick example to give you an idea of what it feels like working with Pyjs:</p>
 <pre class="literal-block">
 from pyjamas.ui.RootPanel import RootPanel
 from pyjamas.ui.Label import Label
@@ -56,10 +57,10 @@ from pyjamas.ui.Label import Label
 l = Label('Hello Pyjs')
 RootPanel().add(l)
 </pre>
-<p>Now run <tt class="docutils literal">pyjsbuild hello.py</tt> to generate a plain JavaScript application: pyjs creates an <tt class="docutils literal">./output</tt> folder containing all files you need to move to your webspace later. Of course you can test locally,
+<p>Now run <tt class="docutils literal">pyjsbuild hello.py</tt> to generate a plain JavaScript application: Pyjs creates an <tt class="docutils literal">./output</tt> folder containing all files you need to move to your webspace later. Of course you can test locally,
 too.</p>
 <p>Add 3 additional lines in total and your application can run with both
-Pyjs (i.e. plain Javascript) <em>and</em> Pyjs Desktop:</p>
+Pyjs (i.e. plain JavaScript) <em>and</em> Pyjs Desktop:</p>
 <pre class="literal-block">
 <strong>import pyjd</strong> # this is dummy in pyjs
 from pyjamas.ui.RootPanel import RootPanel
