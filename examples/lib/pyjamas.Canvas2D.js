@@ -24,7 +24,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 			var $cls_definition = new Object();
 			var $method;
 			$cls_definition['__module__'] = 'pyjamas.Canvas2D';
-			$cls_definition['__md5__'] = '60745506ecbdcfee297a88c479192daf';
+			$cls_definition['__md5__'] = '14b23c6772d350d689eefb5ee12d8b7c';
 			$method = $pyjs__bind_method2('__init__', function(Width, Height) {
 				if (this['__is_instance__'] === true) {
 					var self = this;
@@ -49,7 +49,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 4)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 4, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '60745506ecbdcfee297a88c479192daf') {
+					if (self.prototype['__md5__'] !== '14b23c6772d350d689eefb5ee12d8b7c') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -111,6 +111,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 				self['init']();
 				$p['getattr'](self, 'context')['__is_instance__'] && typeof $p['getattr'](self, 'context')['__setattr__'] == 'function' ? $p['getattr'](self, 'context')['__setattr__']('fillStyle', 'black') : $p['setattr']($p['getattr'](self, 'context'), 'fillStyle', 'black'); 
 				$p['getattr'](self, 'context')['__is_instance__'] && typeof $p['getattr'](self, 'context')['__setattr__'] == 'function' ? $p['getattr'](self, 'context')['__setattr__']('strokeStyle', 'black') : $p['setattr']($p['getattr'](self, 'context'), 'strokeStyle', 'black'); 
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('onImageLoad', $p['getattr'](self, 'onLoad')) : $p['setattr'](self, 'onImageLoad', $p['getattr'](self, 'onLoad')); 
 				return null;
 			}
 	, 1, [null,['kwargs'],['self'],['Width', $constant_int_0],['Height', $constant_int_0]]);
@@ -126,7 +127,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '60745506ecbdcfee297a88c479192daf') {
+					if (self.prototype['__md5__'] !== '14b23c6772d350d689eefb5ee12d8b7c') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -150,7 +151,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '60745506ecbdcfee297a88c479192daf') {
+					if (self.prototype['__md5__'] !== '14b23c6772d350d689eefb5ee12d8b7c') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -173,7 +174,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '60745506ecbdcfee297a88c479192daf') {
+					if (self.prototype['__md5__'] !== '14b23c6772d350d689eefb5ee12d8b7c') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -194,7 +195,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '60745506ecbdcfee297a88c479192daf') {
+					if (self.prototype['__md5__'] !== '14b23c6772d350d689eefb5ee12d8b7c') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -215,7 +216,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '60745506ecbdcfee297a88c479192daf') {
+					if (self.prototype['__md5__'] !== '14b23c6772d350d689eefb5ee12d8b7c') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -238,7 +239,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 			var $cls_definition = new Object();
 			var $method;
 			$cls_definition['__module__'] = 'pyjamas.Canvas2D';
-			$cls_definition['__md5__'] = 'eb3807614ea333c8c25a575cf144e1e0';
+			$cls_definition['__md5__'] = '945b6eef036e0279574b21abbe920591';
 			$method = $pyjs__bind_method2('__init__', function(url, load_listener) {
 				if (this['__is_instance__'] === true) {
 					var self = this;
@@ -251,7 +252,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 3)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 3, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== 'eb3807614ea333c8c25a575cf144e1e0') {
+					if (self.prototype['__md5__'] !== '945b6eef036e0279574b21abbe920591') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -289,7 +290,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== 'eb3807614ea333c8c25a575cf144e1e0') {
+					if (self.prototype['__md5__'] !== '945b6eef036e0279574b21abbe920591') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -309,7 +310,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 			var $cls_definition = new Object();
 			var $method;
 			$cls_definition['__module__'] = 'pyjamas.Canvas2D';
-			$cls_definition['__md5__'] = '75e02ad56c786b11f37c7a3b00b4f270';
+			$cls_definition['__md5__'] = '7717891d032524705e510d3f5c14a4c8';
 			$method = $pyjs__bind_method2('__init__', function(listener) {
 				if (this['__is_instance__'] === true) {
 					var self = this;
@@ -321,7 +322,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 2)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '75e02ad56c786b11f37c7a3b00b4f270') {
+					if (self.prototype['__md5__'] !== '7717891d032524705e510d3f5c14a4c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -344,6 +345,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 							 true ) )) {
 					self['addLoadListener'](listener);
 				}
+				self['__is_instance__'] && typeof self['__setattr__'] == 'function' ? self['__setattr__']('onImageLoad', $p['getattr'](self, 'onLoad')) : $p['setattr'](self, 'onImageLoad', $p['getattr'](self, 'onLoad')); 
 				return null;
 			}
 	, 1, [null,null,['self'],['listener', null]]);
@@ -359,7 +361,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '75e02ad56c786b11f37c7a3b00b4f270') {
+					if (self.prototype['__md5__'] !== '7717891d032524705e510d3f5c14a4c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -383,7 +385,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '75e02ad56c786b11f37c7a3b00b4f270') {
+					if (self.prototype['__md5__'] !== '7717891d032524705e510d3f5c14a4c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -405,7 +407,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '75e02ad56c786b11f37c7a3b00b4f270') {
+					if (self.prototype['__md5__'] !== '7717891d032524705e510d3f5c14a4c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -444,7 +446,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '75e02ad56c786b11f37c7a3b00b4f270') {
+					if (self.prototype['__md5__'] !== '7717891d032524705e510d3f5c14a4c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -478,7 +480,7 @@ $pyjs['loaded_modules']['pyjamas.Canvas2D'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '75e02ad56c786b11f37c7a3b00b4f270') {
+					if (self.prototype['__md5__'] !== '7717891d032524705e510d3f5c14a4c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}

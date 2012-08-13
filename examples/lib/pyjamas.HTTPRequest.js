@@ -104,7 +104,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 			var $cls_definition = new Object();
 			var $method;
 			$cls_definition['__module__'] = 'pyjamas.HTTPRequest';
-			$cls_definition['__md5__'] = '163baf602e90d82e1e8e75c23b12a277';
+			$cls_definition['__md5__'] = '4ec2b7727b17be4900d5f98faf2f53c8';
 			$method = $pyjs__bind_method2('asyncGet', function(url, handler, returnxml, content_type, headers, user, pwd) {
 				if (this['__is_instance__'] === true) {
 					var self = this;
@@ -122,7 +122,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 3 || arguments['length'] > 8)) $pyjs__exception_func_param(arguments['callee']['__name__'], 3, 8, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -180,7 +180,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 4 || arguments['length'] > 9)) $pyjs__exception_func_param(arguments['callee']['__name__'], 4, 9, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -236,7 +236,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 3 || arguments['length'] > 8)) $pyjs__exception_func_param(arguments['callee']['__name__'], 3, 8, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -294,7 +294,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 4 || arguments['length'] > 9)) $pyjs__exception_func_param(arguments['callee']['__name__'], 4, 9, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -343,7 +343,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -364,7 +364,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -388,7 +388,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 4) $pyjs__exception_func_param(arguments['callee']['__name__'], 4, 4, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -427,7 +427,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 4) $pyjs__exception_func_param(arguments['callee']['__name__'], 4, 4, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -496,7 +496,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 4) $pyjs__exception_func_param(arguments['callee']['__name__'], 4, 4, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -572,7 +572,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -701,7 +701,7 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 7 || arguments['length'] > 10)) $pyjs__exception_func_param(arguments['callee']['__name__'], 7, 10, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '163baf602e90d82e1e8e75c23b12a277') {
+					if (self.prototype['__md5__'] !== '4ec2b7727b17be4900d5f98faf2f53c8') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -963,17 +963,28 @@ $pyjs['loaded_modules']['pyjamas.HTTPRequest'] = function (__mod_name__) {
 					}
 				}
 				$m['handlers']['__setitem__'](xmlHttp, handler);
-				xmlHttp['send'](((($bool40=$or7=postData) === null || $bool40 === false || $bool40 === 0 || $bool40 === '' ?
-					false :
-					(typeof $bool40=='object'?
-						(typeof $bool40['__nonzero__']=='function'?
-							$bool40['__nonzero__']() :
-							(typeof $bool40['__len__']=='function'?
-								($bool40['__len__']()>0 ?
-									true :
-									false) :
-								true ) ) :
-						 true ) )?$or7:''));
+				try {
+					xmlHttp['send'](((($bool40=$or7=postData) === null || $bool40 === false || $bool40 === 0 || $bool40 === '' ?
+						false :
+						(typeof $bool40=='object'?
+							(typeof $bool40['__nonzero__']=='function'?
+								$bool40['__nonzero__']() :
+								(typeof $bool40['__len__']=='function'?
+									($bool40['__len__']()>0 ?
+										true :
+										false) :
+									true ) ) :
+							 true ) )?$or7:''));
+				} catch($pyjs_try_err) {
+					$pyjs_try_err = $p['_errorMapping']($pyjs_try_err);
+					var $pyjs_try_err_name = (typeof $pyjs_try_err['__name__'] == 'undefined' ? $pyjs_try_err['name'] : $pyjs_try_err['__name__'] );
+					$pyjs['__last_exception__'] = {'error': $pyjs_try_err, 'module': $m};
+					if (true) {
+						handler['onError']('xmlHttp.send error', (typeof ($usub1=$constant_int_1)=='number'?
+							-$usub1:
+							$p['op_usub']($usub1)));
+					}
+				}
 				return xmlHttp;
 				handler = null;
 				xmlHttp = null;

@@ -292,20 +292,26 @@ pyjamas.gears.database.Database.GearsDatabase.open" class="py-name" href="#" onc
 <a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"> </tt>
 <a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line">        <tt id="link-39" class="py-name"><a title="pyjamas.HTTPRequest.handlers
 pyjamas.logging.handlers" class="py-name" href="#" onclick="return doclink('link-39', 'handlers', 'link-0');">handlers</a></tt><tt class="py-op">[</tt><tt class="py-name">xmlHttp</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">handler</tt> </tt>
-<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-name">xmlHttp</tt><tt class="py-op">.</tt><tt class="py-name">send</tt><tt class="py-op">(</tt><tt class="py-name">postData</tt> <tt class="py-keyword">or</tt> <tt class="py-string">''</tt><tt class="py-op">)</tt> </tt>
-<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"> </tt>
-<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">xmlHttp</tt> </tt>
-<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line"> </tt>
-<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line">        <tt class="py-comment">#except:</tt> </tt>
-<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">            <tt class="py-comment">#del xmlHttp.onreadystatechange</tt> </tt>
-<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line">        <tt class="py-name">handler</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
-<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-name">xmlHttp</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
-<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">        <tt class="py-name">localHandler</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="pyjamas.JSONService.JSONResponseTextHandler.onError
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line">        <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line">            <tt class="py-name">xmlHttp</tt><tt class="py-op">.</tt><tt class="py-name">send</tt><tt class="py-op">(</tt><tt class="py-name">postData</tt> <tt class="py-keyword">or</tt> <tt class="py-string">''</tt><tt class="py-op">)</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line">        <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line">            <tt class="py-name">handler</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="pyjamas.JSONService.JSONResponseTextHandler.onError
 pyjamas.JSONTranslations.JSONTranslations.onError
 pyjamas.Window.onError
-pyjamas.builder.Builder.HTTPUILoader.onError" class="py-name" href="#" onclick="return doclink('link-40', 'onError', 'link-20');">onError</a></tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">e</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
-<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
-</div></div><a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+pyjamas.builder.Builder.HTTPUILoader.onError" class="py-name" href="#" onclick="return doclink('link-40', 'onError', 'link-20');">onError</a></tt><tt class="py-op">(</tt><tt class="py-string">"xmlHttp.send error"</tt><tt class="py-op">,</tt> <tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line"> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">xmlHttp</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line">        <tt class="py-comment">#except:</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line">            <tt class="py-comment">#del xmlHttp.onreadystatechange</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line">        <tt class="py-name">handler</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line">        <tt class="py-name">xmlHttp</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line">        <tt class="py-name">localHandler</tt><tt class="py-op">.</tt><tt id="link-41" class="py-name"><a title="pyjamas.JSONService.JSONResponseTextHandler.onError
+pyjamas.JSONTranslations.JSONTranslations.onError
+pyjamas.Window.onError
+pyjamas.builder.Builder.HTTPUILoader.onError" class="py-name" href="#" onclick="return doclink('link-41', 'onError', 'link-20');">onError</a></tt><tt class="py-op">(</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">e</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">None</tt> </tt>
+</div></div><a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line"> </tt><script type="text/javascript">
 <!--
 expandto(location.href);
 // -->
