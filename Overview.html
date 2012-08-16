@@ -16,7 +16,6 @@
 <li class="section">About</li>
 <li><a class="reference external" href="About.html">About</a></li>
 <li><a class="reference external" href="Overview.html">Overview</a></li>
-<li><a class="reference external" href="Features.html">Features</a></li>
 <li><a class="reference external" href="Translator.html">Translator</a></li>
 <li><a class="reference external" href="Download.html">Download</a></li>
 <li><a class="reference external" href="GettingHelp.html">Getting Help</a></li>
@@ -28,7 +27,6 @@
 <li><a class="reference external" href="https://github.com/pyjs/pyjs/wiki">Wiki</a></li>
 <li class="section">Development</li>
 <li><a class="reference external" href="Developing.html">Develop</a></li>
-<li><a class="reference external" href="Deploy.html">Deploy</a></li>
 <li><a class="reference external" href="Optimize.html">Optimize</a></li>
 <li><a class="reference external" href="Contribute.html">Contribute</a></li>
 <li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
@@ -39,40 +37,78 @@
 </div>
 <div id="body">
 <h1 class="title">Overview</h1>
-<p>Like GWT, Pyjs translates a Python application and libraries (including UI widgets and DOM classes) into a JavaScript application and libraries, and packages it all up:</p>
-<img alt="Overview of Pyjs' components" class="align-center" src="assets/images/overview.png" />
+<p>Like GWT, pyjs translates a Python application and libraries (including UI widgets and DOM classes) into a JavaScript application and libraries, and packages it all up:</p>
+<img alt="Overview of pyjs' components" class="align-center" src="assets/images/overview.png" />
 <ol class="arabic simple">
 <li><strong>pyjs</strong> translates Python code to JavaScript by walking the Python abstract syntax tree and generating JavaScript.</li>
 <li><strong>pyjslib</strong> takes care of Python types that require a custom JavaScript implementation for pyjs to work. For example, even though Python lists are similar to JavaScript arrays, Python lists are converted to custom objects that implement methods such as <tt class="docutils literal">append</tt>.</li>
 <li><strong>UI widgets and a DOM library</strong> are provided as a convenience. They are written in Python and, like everything else, they are translated to JavaScript for deployment. These are based on those in GWT.</li>
 <li><strong>build</strong> manages the overall translation of individual components and creates a set of <tt class="docutils literal">.html</tt> and <tt class="docutils literal">.js</tt> files that can be served up by a Web server.</li>
 </ol>
+<div class="section" id="features">
+<h1>Features</h1>
+<p>This is a list of the overall pyjs features, including the
+Python-to-JavaScript translator as well as the UI Widget Set.
+For specific language features supported by the Python-to-JavaScript
+translator, see the <a class="reference external" href="Translator.html">translator description</a>.</p>
+<ul class="simple">
+<li>Dynamic and reusable UI components: programmers can use
+pre-designed classes to implement otherwise time-consuming
+dynamic behaviors, such as drag-and-drop or sophisticated visual
+tree structures.</li>
+<li>Supports basic Python types, emulated in JavaScript, such as List,
+Dictionary, Tuple, string; many of the standard Python built-in
+functions, such as map, filter, range; and some of the standard
+Python Exceptions are supported.</li>
+<li>Declarative style of &quot;desktop&quot; widget programming (almost identical to
+python-qt4, python-gtk2 and python-wxWidgets), yet the applications
+are compiled to javascript and run in all major web browsers.</li>
+<li>Simple RPC mechanism</li>
+<li>Browser history management, covering &quot;Back&quot;, &quot;Forward&quot; with no hassle
+for the developer.  AJAX applications typically break the &quot;Go Back&quot;
+button: use the History module to provide your application with
+History management.</li>
+<li>Run-time Support for runtime errors: a function call stack can be kept
+in debug mode, and displayed when a runtime error occurs.  This is
+incredibly useful in situations where installing a JavaScript debugger
+is inconvenient or impossible.</li>
+<li>pyjs handles all cross-browser issues for the developer.</li>
+<li>The developers can mix handwritten JavaScript in the Python source code,
+including plumbing in to other Javascript frameworks and libraries.</li>
+<li>Beginnings of support for using Google APIs in GWT applications
+(initially, support for Google Gears Database)</li>
+<li>pyjs is entirely Free Software.</li>
+<li>The developers can design and develop their application in a pure
+object-oriented fashion, since they're using Python (instead of
+JavaScript).</li>
+</ul>
+</div>
 <div class="section" id="hello-world">
 <h1>Hello World</h1>
-<p>A quick example to give you an idea of what it feels like working with Pyjs:</p>
+<p>A quick example to give you an idea of what it feels like working with pyjs:</p>
 <pre class="literal-block">
 from pyjamas.ui.RootPanel import RootPanel
 from pyjamas.ui.Label import Label
 
-l = Label('Hello Pyjs')
+l = Label('Hello pyjs')
 RootPanel().add(l)
 </pre>
-<p>Now run <tt class="docutils literal">pyjsbuild hello.py</tt> to generate a plain JavaScript application: Pyjs creates an <tt class="docutils literal">./output</tt> folder containing all files you need to move to your webspace later. Of course you can test locally,
+<p>Now run <tt class="docutils literal">pyjsbuild hello.py</tt> to generate a plain JavaScript application: pyjs creates an <tt class="docutils literal">./output</tt> folder containing all files you need to move to your webspace later. Of course you can test locally,
 too.</p>
 <p>Add 3 additional lines in total and your application can run with both
-Pyjs (i.e. plain JavaScript) <em>and</em> Pyjs Desktop:</p>
+pyjs (i.e. plain JavaScript) <em>and</em> pyjs Desktop:</p>
 <pre class="literal-block">
 <strong>import pyjd</strong> # this is dummy in pyjs
 from pyjamas.ui.RootPanel import RootPanel
 from pyjamas.ui.Label import Label
 
 <strong>pyjd.setup('public/hello.html')</strong>
-l = Label('Hello Pyjs')
+l = Label('Hello pyjs')
 RootPanel().add(l)
 <strong>pyjd.run()</strong>
 </pre>
-<p>Execute <tt class="docutils literal">pyjd hello.py</tt>, or <tt class="docutils literal">python hello.py</tt>, to run the very same application native on Python, giving you a Python stack trace on errors. Pyjs Desktop gives you much more control making testing and debugging
-a piece of a cake. Note the <tt class="docutils literal">hello.html</tt> file referenced above: this is a container for your application generated by Pyjs that you can adjust to your needs.</p>
+<p>Execute <tt class="docutils literal">pyjd hello.py</tt>, or <tt class="docutils literal">python hello.py</tt>, to run the very same application native on Python, giving you a Python stack trace on errors.  pyjs Desktop gives you much more control making testing and debugging
+a piece of a cake.  Note the <tt class="docutils literal">hello.html</tt> file referenced above: this is a container for your application generated by pyjs that you can adjust to your needs.</p>
 <p>Ready for more? <a class="reference external" href="GettingHelp.html">Let's get started</a>!</p>
 </div>
 </div>

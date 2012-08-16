@@ -16,7 +16,6 @@
 <li class="section">About</li>
 <li><a class="reference external" href="About.html">About</a></li>
 <li><a class="reference external" href="Overview.html">Overview</a></li>
-<li><a class="reference external" href="Features.html">Features</a></li>
 <li><a class="reference external" href="Translator.html">Translator</a></li>
 <li><a class="reference external" href="Download.html">Download</a></li>
 <li><a class="reference external" href="GettingHelp.html">Getting Help</a></li>
@@ -28,7 +27,6 @@
 <li><a class="reference external" href="https://github.com/pyjs/pyjs/wiki">Wiki</a></li>
 <li class="section">Development</li>
 <li><a class="reference external" href="Developing.html">Develop</a></li>
-<li><a class="reference external" href="Deploy.html">Deploy</a></li>
 <li><a class="reference external" href="Optimize.html">Optimize</a></li>
 <li><a class="reference external" href="Contribute.html">Contribute</a></li>
 <li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
@@ -39,49 +37,49 @@
 </div>
 <div id="body">
 <div class="section" id="special-note-about-pyjs-development">
-<h1>Special Note About Pyjs Development</h1>
-<p>Pyjs is Free Software, and is made up of its contributions from users, for its users. As a Free Software Project, its existence and continued development depends exclusively on financial and technical contributions.</p>
-<p>If you use Pyjs for a non-commercial project, consider contributing patches, examples, or documentation updates.  If you use it for a commercial project, consider contracting the Lead Developers to assist your development. This helps ensure the Pyjs codebase remains stable and consistent with your project's development. If you just like Pyjs and wish to see it move forward, consider sponsoring or making a donation to help support the continuing efforts toward the Pyjs Roadmap.</p>
+<h1>Special Note About pyjs Development</h1>
+<p>pyjs is Free Software, and is made up of its contributions from users, for its users. As a Free Software Project, its existence and continued development depends exclusively on financial and technical contributions.</p>
+<p>If you use pyjs for a non-commercial project, consider contributing patches, examples, or documentation updates.  If you use it for a commercial project, consider contracting the Lead Developers to assist your development. This helps ensure the pyjs codebase remains stable and consistent with your project's development. If you just like pyjs and wish to see it move forward, consider sponsoring or making a donation to help support the continuing efforts toward the pyjs Roadmap.</p>
 <div class="section" id="pyjs-roadmap">
-<h2>Pyjs Roadmap</h2>
-<p>As Pyjs comprises several projects, each has its own future and
+<h2>pyjs Roadmap</h2>
+<p>As pyjs comprises several projects, each has its own future and
 direction.</p>
 </div>
 </div>
 <div class="section" id="pyjs-compiler">
-<h1>Pyjs Compiler</h1>
+<h1>pyjs Compiler</h1>
 <ul class="simple">
 <li>Add support for exec and eval (like Skulpt).</li>
-<li>Improve the Python interoperability support for --strict, with the goal of providing full and complete Python interoperability for this mode.</li>
+<li>Improve the Python interoperability support for <tt class="docutils literal"><span class="pre">--strict</span></tt>, with the goal of providing full and complete Python interoperability for this mode.</li>
 <li>Provide a complete suite of interoperable Python modules.</li>
 <li>Be able to run and pass the standard CPython test suite, under pyv8run and pysmrun (all 25,000 regression tests).</li>
 <li>Add decorators to all functions which allow the declaration of the types
 of parameters and the return result, and enhance the compiler so that it
 optimises the generated code.  One of the flaws of the Python programming
-language is that every operation (+, -, len etc.) requires double-checking
+language is that every operation (<tt class="docutils literal">+</tt>, <tt class="docutils literal">-</tt>, <tt class="docutils literal">len</tt> etc.) requires double-checking
 the type of the object, and CPython always check whether the two types are
 integers, then moves into complex detection and type coercion second.
-Converting this logic to javascript has proved to be very expensive for
---strict.  Emacs and PyQT4 solve this by allowing the type of parameters and
+Converting this logic to JavaScript has proved to be very expensive for
+<tt class="docutils literal"><span class="pre">--strict</span></tt>.  Emacs and PyQt4 solve this by allowing the type of parameters and
 the return result to be declared in advance.</li>
-<li>Complete the enhancements work listed in the TODO file.</li>
+<li>Complete the enhancements work listed in the <a class="reference external" href="https://github.com/pyjs/pyjs/blob/master/doc/todo">TODO</a> file.</li>
 </ul>
 </div>
 <div class="section" id="pyjs-widget-set">
-<h1>Pyjs Widget Set</h1>
+<h1>pyjs Widget Set</h1>
 <ul class="simple">
 <li>Continue to track GWT Widgets</li>
-<li>Seek out cool and useful projects to convert to Pyjs, such as gwt-g3d (WebGL 3D API using new HTML5 features)</li>
-<li>Make automated conversion of GWT-compliant code into Pyjs code much easier.</li>
+<li>Seek out cool and useful projects to convert to pyjs, such as gwt-g3d (WebGL 3D API using new HTML5 features)</li>
+<li>Make automated conversion of GWT-compliant code into pyjs code much easier.</li>
 </ul>
 </div>
 <div class="section" id="pyjs-desktop">
-<h1>Pyjs Desktop</h1>
+<h1>pyjs Desktop</h1>
 <ul class="simple">
 <li>Add more runtimes, especially for MacOSX and embedded systems.</li>
 <li>Provide easy-to-install dependencies for all platforms across all computing architectures (webkitgtk is <strong>not</strong> easy to install on Win32 or MacOSX, neither is pywebkitgtk).</li>
-<li>Change the startup API so that it uses the HTML loader file to detect the module (just like Pyjs)</li>
-<li>Provide the means to open several web engine windows (support for Window.open) and still have them load and run Pyjs applications.</li>
+<li>Change the startup API so that it uses the HTML loader file to detect the module (just like pyjs)</li>
+<li>Provide the means to open several web engine windows (support for Window.open) and still have them load and run pyjs applications.</li>
 </ul>
 </div>
 </div>
