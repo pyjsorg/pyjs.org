@@ -30,8 +30,6 @@
 <li><a class="reference external" href="Optimize.html">Optimize</a></li>
 <li><a class="reference external" href="Contribute.html">Contribute</a></li>
 <li><a class="reference external" href="Roadmap.html">Roadmap</a></li>
-<li class="section">Deprecated</li>
-<li><a class="reference external" href="FAQ.html">FAQ</a></li>
 </ul>
 
 </div>
@@ -39,7 +37,7 @@
 <h1 class="title">Develop</h1>
 <div class="section" id="source-code">
 <h1>Source Code</h1>
-<p>The pyjs project repositories are now hosted <a class="reference external" href="https://github.com/pyjs">on Github</a>. For read-only access to pyjs' main repository use the following:</p>
+<p>The pyjs repositories are hosted <a class="reference external" href="https://github.com/pyjs">on Github</a>. For read-only access to pyjs' main repository use the following:</p>
 <pre class="literal-block">
 git clone https://github.com/pyjs/pyjs.git
 </pre>
@@ -52,11 +50,11 @@ git clone https://github.com/pyjs/pyjs.git
 <li>For Firefox, install both <a class="reference external" href="https://addons.mozilla.org/de/firefox/addon/javascript-debugger/">Venkman</a> and <a class="reference external" href="https://addons.mozilla.org/de/firefox/addon/firebug/">Firebug</a>.</li>
 <li>For IE, install the <a class="reference external" href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=2f465be0-94fd-4569-b3c4-dffdf19ccd99&amp;amp;DisplayLang=en">Microsoft Script Debugger</a>.</li>
 <li>For Safari, go to the settings and enable &quot;Development&quot;.</li>
-<li>For Chrome, <a class="reference external" href="http://chrispederick.com/work/web-developer/">Web Developer</a> has been reported to make your life easier. (Problems with Chrome/Chromium? See <a class="reference external" href="https://github.com/pyjs/pyjs/wiki/googlechromeproblems">main Wiki</a>.)</li>
+<li>For Chrome, <a class="reference external" href="http://chrispederick.com/work/web-developer/">Web Developer</a> has been reported to make your life easier. (Problems with Chrome/Chromium? See <a class="reference external" href="https://github.com/pyjs/pyjs/wiki/googlechromeproblems">main Wiki</a>)</li>
 <li>Opera has stack tracing by default.</li>
 </ul>
 <p>For debug output using pyjs' <tt class="docutils literal">logging</tt> module is recommended (see below for details).</p>
-<p>You should also note that the pyjs compiler has a &quot;-d&quot; option which will enable a python-like stack trace when a JavaScript exception occurs. The amount of JavaScript generated can be FIVE times larger, so only enable this during development.</p>
+<p>You should also note that the pyjs compiler has a <tt class="docutils literal"><span class="pre">-d</span></tt> option which will enable a Python-like stack trace when a JavaScript exception occurs. The amount of JavaScript generated can be FIVE times larger, so only enable this during development.</p>
 <p>Lastly, it is worth reiterating that pyjs Desktop runs as pure Python: you should give serious consideration to running the application under pyjs Desktop alongside developing it for the browser. The availability of Python runtime stack traces and the simple fact that the standard Python interpreter is much better at catching certain kinds of errors than (brain-damaged) browsers has generally found to make life much much easier.</p>
 </div>
 <div class="section" id="debug-output">
@@ -97,13 +95,11 @@ main classes you need to create your user interface. At first, this module can b
 <dt>/bin/</dt>
 <dd>Executables created when bootstrapping appear here</dd>
 <dt>/builder/</dt>
-<dd>Just ignore that for now</dd>
+<dd>Boilerplate files etc. for <tt class="docutils literal">pyjs_build</tt>'s building process</dd>
 <dt>/contrib/</dt>
 <dd>Miscellaneous helper scripts</dd>
-<dt>/dev/</dt>
-<dd>Just ignore that for now</dd>
 <dt>/doc/</dt>
-<dd>The content of pyjs.org is here</dd>
+<dd>Documentation, tutorials, and scripts that build them</dd>
 <dt>/examples/</dt>
 <dd>Lots of examples with their build scripts (also used to test all is ok)</dd>
 <dt>/examples/libtest/</dt>
@@ -126,9 +122,7 @@ main classes you need to create your user interface. At first, this module can b
 <dd>Spidermonkey runner (executes js code on that js engine)</dd>
 <dt>/pyv8/</dt>
 <dd>Google V8 runner (executes js code on that js engine)</dd>
-<dt>/tests/</dt>
-<dd>Just ignore that for now</dd>
-<dt>bootstrap</dt>
+<dt>/bootstrap.py</dt>
 <dd>The script through which everything starts</dd>
 <dt>/test.py</dt>
 <dd>Very useful to easily launch unit-tests (especially libtest) on several engines</dd>
