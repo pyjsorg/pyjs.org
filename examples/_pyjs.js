@@ -418,6 +418,7 @@ function $pyjs__class_function(cls_fn, prop, bases) {
         for (var p in base) cls_fn[p] = base[p];
     }
     for (var p in prop) cls_fn[p] = prop[p];
+    delete cls_fn['$H'];
 
     if (cls_fn['__new__'] == null) {
       cls_fn['__new__'] = $pyjs__bind_method(cls_fn, '__new__', function(cls) {

@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"Mail.ie6.dbb0b89b3a720a78f40e942a5bf33608.cache.html");
-O(["true","opera"],"Mail.opera.b12ed6ef4a5bf9fcf4bb73bd4c99273f.cache.html");
-O(["true","oldmoz"],"Mail.oldmoz.337e8efaf518f6dbd65e36e30d94f880.cache.html");
-O(["true","safari"],"Mail.safari.f288b1c015d6646d8bb0745c39a1a19f.cache.html");
-O(["true","mozilla"],"Mail.mozilla.e414fa583afe01ae144782faa0029f30.cache.html");
+    O(["true","ie6"],"Mail.ie6.ed66d521e4fa885e310a1cba228ecd33.cache.html");
+O(["true","opera"],"Mail.opera.f74ca441a821d054ec619f9f0e1f028c.cache.html");
+O(["true","oldmoz"],"Mail.oldmoz.953f0e158969226abd9a39e141b4545b.cache.html");
+O(["true","safari"],"Mail.safari.a0e9f243bab5c2df60d7760642bdb394.cache.html");
+O(["true","mozilla"],"Mail.mozilla.2ec49632dbbf0302c9fac0e05a8549eb.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];

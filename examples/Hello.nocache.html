@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"Hello.ie6.5168b216ac9ba083f9bc3eef9f025b29.cache.html");
-O(["true","opera"],"Hello.opera.dfe19239a6f3cc007c4023d53f514ce3.cache.html");
-O(["true","oldmoz"],"Hello.oldmoz.6c6c70f98ac989a1bd3524000ac022e4.cache.html");
-O(["true","safari"],"Hello.safari.bfff735ac90aa440db8b446001b7a409.cache.html");
-O(["true","mozilla"],"Hello.mozilla.34d3899e0ead688347bdcdb495741b90.cache.html");
+    O(["true","ie6"],"Hello.ie6.38f64db3673c7dbb9aace1013ab84fb0.cache.html");
+O(["true","opera"],"Hello.opera.8ceb132c4ab7e1749e0e85611d5269f0.cache.html");
+O(["true","oldmoz"],"Hello.oldmoz.3e830ebb2d27b11505967150816e2eb0.cache.html");
+O(["true","safari"],"Hello.safari.ad89eda801a6dbe962578c4ccde23bb0.cache.html");
+O(["true","mozilla"],"Hello.mozilla.960497e90b220dfeb233154e31e7558c.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];

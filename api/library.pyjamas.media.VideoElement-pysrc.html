@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>library.pyjamas.media.VideoElement</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="library.pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Package&nbsp;library ::
+        <a href="library.pyjamas-module.html">Package&nbsp;pyjamas</a> ::
+        <a href="library.pyjamas.media-module.html">Package&nbsp;media</a> ::
+        Module&nbsp;VideoElement
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="library.pyjamas.media.VideoElement-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="library.pyjamas.media.VideoElement-module.html">Module library.pyjamas.media.VideoElement</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-docstring">* Copyright 2009 Mark Renouf</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-docstring">* Licensed under the Apache License, Version 2.0 (the "License"); you may not</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-docstring">* use this file except in compliance with the License. You may obtain a copy of</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt class="py-docstring">* the License at</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt class="py-docstring">* http:#www.apache.org/licenses/LICENSE-2.0</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-docstring">*</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-docstring">* Unless required by applicable law or agreed to in writing, software</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-docstring">* distributed under the License is distributed on an "AS IS" BASIS, WITHDIR</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt class="py-docstring">* WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt class="py-docstring">* License for the specific language governing permissions and limitations under</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt class="py-docstring">* the License.</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt class="py-docstring">"""</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt class="py-decorator">@</tt><tt class="py-decorator">TagName</tt><tt class="py-op">(</tt><tt id="link-0" class="py-name" targets="Module library.pyjamas.media.VideoElement=library.pyjamas.media.VideoElement-module.html,Class library.pyjamas.media.VideoElement.VideoElement=library.pyjamas.media.VideoElement.VideoElement-class.html"><a title="library.pyjamas.media.VideoElement
+library.pyjamas.media.VideoElement.VideoElement" class="py-name" href="#" onclick="return doclink('link-0', 'VideoElement', 'link-0');">VideoElement</a></tt><tt class="py-op">.</tt><tt id="link-1" class="py-name" targets="Variable library.pyjamas.media.VideoElement.VideoElement.TAG=library.pyjamas.media.VideoElement.VideoElement-class.html#TAG"><a title="library.pyjamas.media.VideoElement.VideoElement.TAG" class="py-name" href="#" onclick="return doclink('link-1', 'TAG', 'link-1');">TAG</a></tt><tt class="py-op">)</tt> </tt>
+<a name="VideoElement"></a><div id="VideoElement-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="VideoElement-toggle" onclick="return toggle('VideoElement');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html">VideoElement</a><tt class="py-op">(</tt><tt class="py-base-class">MediaElement</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="VideoElement-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">    <tt id="link-2" class="py-name"><a title="library.pyjamas.media.VideoElement.VideoElement.TAG" class="py-name" href="#" onclick="return doclink('link-2', 'TAG', 'link-1');">TAG</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"video"</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.create"></a><div id="VideoElement.create-def"><a name="L21"></a><tt class="py-lineno">21</tt> <a class="py-toggle" href="#" id="VideoElement.create-toggle" onclick="return toggle('VideoElement.create');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#create">create</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.create-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.create-expanded"><a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">Document</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method library.pyjamas.django.Form.Form.get()=library.pyjamas.django.Form.Form-class.html#get,Method library.pyjamas.ui.Anchor._Attribute.get()=library.pyjamas.ui.Anchor._Attribute-class.html#get,Function library.pyjamas.ui.RootPanel.get()=library.pyjamas.ui.RootPanel-module.html#get"><a title="library.pyjamas.django.Form.Form.get
+library.pyjamas.ui.Anchor._Attribute.get
+library.pyjamas.ui.RootPanel.get" class="py-name" href="#" onclick="return doclink('link-3', 'get', 'link-3');">get</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Function library.pyjamas.DOM.createElement()=library.pyjamas.DOM-module.html#createElement,Method library.pyjamas.ui.PopupPanel.PopupPanel.createElement()=library.pyjamas.ui.PopupPanel.PopupPanel-class.html#createElement,Method library.pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.createElement()=library.pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl-class.html#createElement,Method library.pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.createElement()=library.pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard-class.html#createElement"><a title="library.pyjamas.DOM.createElement
+library.pyjamas.ui.PopupPanel.PopupPanel.createElement
+library.pyjamas.ui.RichTextAreaImpl.RichTextAreaImpl.createElement
+library.pyjamas.ui.RichTextAreaImplStandard.RichTextAreaImplStandard.createElement" class="py-name" href="#" onclick="return doclink('link-4', 'createElement', 'link-4');">createElement</a></tt><tt class="py-op">(</tt><tt id="link-5" class="py-name"><a title="library.pyjamas.media.VideoElement.VideoElement.TAG" class="py-name" href="#" onclick="return doclink('link-5', 'TAG', 'link-1');">TAG</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">cast</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.__init__"></a><div id="VideoElement.__init__-def"><a name="L25"></a><tt class="py-lineno">25</tt> <a class="py-toggle" href="#" id="VideoElement.__init__-toggle" onclick="return toggle('VideoElement.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.__init__-expanded"><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">        <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.getWidth"></a><div id="VideoElement.getWidth-def"><a name="L29"></a><tt class="py-lineno">29</tt> <a class="py-toggle" href="#" id="VideoElement.getWidth-toggle" onclick="return toggle('VideoElement.getWidth');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#getWidth">getWidth</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.getWidth-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.getWidth-expanded"><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line"><tt class="py-string">        return this['width'];</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line"> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.setWidth"></a><div id="VideoElement.setWidth-def"><a name="L35"></a><tt class="py-lineno">35</tt> <a class="py-toggle" href="#" id="VideoElement.setWidth-toggle" onclick="return toggle('VideoElement.setWidth');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#setWidth">setWidth</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">width</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.setWidth-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.setWidth-expanded"><a name="L36"></a><tt class="py-lineno">36</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line"><tt class="py-string">        this['width'] = width;</tt> </tt>
+<a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L39"></a><tt class="py-lineno">39</tt>  <tt class="py-line"> </tt>
+<a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.getHeight"></a><div id="VideoElement.getHeight-def"><a name="L41"></a><tt class="py-lineno">41</tt> <a class="py-toggle" href="#" id="VideoElement.getHeight-toggle" onclick="return toggle('VideoElement.getHeight');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#getHeight">getHeight</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.getHeight-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.getHeight-expanded"><a name="L42"></a><tt class="py-lineno">42</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line"><tt class="py-string">        return this['height'];</tt> </tt>
+<a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt>
+<a name="L46"></a><tt class="py-lineno">46</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.setHeight"></a><div id="VideoElement.setHeight-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="VideoElement.setHeight-toggle" onclick="return toggle('VideoElement.setHeight');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#setHeight">setHeight</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">height</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.setHeight-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.setHeight-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"><tt class="py-string">        this['height'] = height;</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"> </tt>
+<a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.getVideoWidth"></a><div id="VideoElement.getVideoWidth-def"><a name="L53"></a><tt class="py-lineno">53</tt> <a class="py-toggle" href="#" id="VideoElement.getVideoWidth-toggle" onclick="return toggle('VideoElement.getVideoWidth');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#getVideoWidth">getVideoWidth</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.getVideoWidth-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.getVideoWidth-expanded"><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"><tt class="py-string">        return this['videoWidth'];</tt> </tt>
+<a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"> </tt>
+<a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.getVideoHeight"></a><div id="VideoElement.getVideoHeight-def"><a name="L59"></a><tt class="py-lineno">59</tt> <a class="py-toggle" href="#" id="VideoElement.getVideoHeight-toggle" onclick="return toggle('VideoElement.getVideoHeight');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#getVideoHeight">getVideoHeight</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.getVideoHeight-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.getVideoHeight-expanded"><a name="L60"></a><tt class="py-lineno">60</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line"><tt class="py-string">        return this['videoHeight'];</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line"> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.getPoster"></a><div id="VideoElement.getPoster-def"><a name="L65"></a><tt class="py-lineno">65</tt> <a class="py-toggle" href="#" id="VideoElement.getPoster-toggle" onclick="return toggle('VideoElement.getPoster');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#getPoster">getPoster</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.getPoster-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.getPoster-expanded"><a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L67"></a><tt class="py-lineno">67</tt>  <tt class="py-line"><tt class="py-string">        return this['poster'];</tt> </tt>
+<a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line"> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line"> </tt>
+<a name="VideoElement.setPoster"></a><div id="VideoElement.setPoster-def"><a name="L71"></a><tt class="py-lineno">71</tt> <a class="py-toggle" href="#" id="VideoElement.setPoster-toggle" onclick="return toggle('VideoElement.setPoster');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="library.pyjamas.media.VideoElement.VideoElement-class.html#setPoster">setPoster</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">url</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="VideoElement.setPoster-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="VideoElement.setPoster-expanded"><a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line">        <tt class="py-name">JS</tt><tt class="py-op">(</tt><tt class="py-string">"""</tt> </tt>
+<a name="L73"></a><tt class="py-lineno">73</tt>  <tt class="py-line"><tt class="py-string">        this['poster'] = url;</tt> </tt>
+<a name="L74"></a><tt class="py-lineno">74</tt>  <tt class="py-line"><tt class="py-string">        """</tt><tt class="py-op">)</tt> </tt>
+</div></div><a name="L75"></a><tt class="py-lineno">75</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="library.pyjamas-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://pyjs.org">Pyjs</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

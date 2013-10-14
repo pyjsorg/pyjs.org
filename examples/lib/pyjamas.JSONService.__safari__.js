@@ -632,7 +632,7 @@ $pyjs['loaded_modules']['pyjamas.JSONService'] = function (__mod_name__) {
 					var params = $p['tuple']($pyjs_array_slice['call'](arguments,0,arguments['length']-1));
 
 					var kwargs = arguments['length'] >= 1 ? arguments[arguments['length']-1] : arguments[arguments['length']];
-					if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+					if (kwargs === null || typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
 						if (typeof kwargs != 'undefined') params['__array']['push'](kwargs);
 						var kwargs = arguments[arguments['length']+1];
 					} else {
@@ -644,7 +644,7 @@ $pyjs['loaded_modules']['pyjamas.JSONService'] = function (__mod_name__) {
 					var params = $p['tuple']($pyjs_array_slice['call'](arguments,1,arguments['length']-1));
 
 					var kwargs = arguments['length'] >= 2 ? arguments[arguments['length']-1] : arguments[arguments['length']];
-					if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+					if (kwargs === null || typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
 						if (typeof kwargs != 'undefined') params['__array']['push'](kwargs);
 						kwargs = arguments[arguments['length']+1];
 					} else {

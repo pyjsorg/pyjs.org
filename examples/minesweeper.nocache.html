@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"minesweeper.ie6.26bdfcee360192623d71f72f0fd32445.cache.html");
-O(["true","opera"],"minesweeper.opera.97f8c939065e9c4a0f5546fa83424ae6.cache.html");
-O(["true","oldmoz"],"minesweeper.oldmoz.21d12f7183cb5e65048b9bf7705843ba.cache.html");
-O(["true","safari"],"minesweeper.safari.eba7f93444eb616034d3541d1c25d1a8.cache.html");
-O(["true","mozilla"],"minesweeper.mozilla.a2937dbe2e7531b80bbf130460ad3d9b.cache.html");
+    O(["true","ie6"],"minesweeper.ie6.ff7c0b6419f5184893cc17b88416d9ef.cache.html");
+O(["true","opera"],"minesweeper.opera.1ddcd8235c722490916abbef9af24f7d.cache.html");
+O(["true","oldmoz"],"minesweeper.oldmoz.d5c9aad4096a68e6c621e09726e6d1c7.cache.html");
+O(["true","safari"],"minesweeper.safari.9779ae0ca86bf7a9ca4243624a6d926a.cache.html");
+O(["true","mozilla"],"minesweeper.mozilla.fcad28e8ee8f176d9fe0c5d8f79915a1.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];

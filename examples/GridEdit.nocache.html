@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"GridEdit.ie6.18f65f31a52f55ab97460c006b2591fd.cache.html");
-O(["true","opera"],"GridEdit.opera.66b5968fe12ed638e55eedae97cd37c1.cache.html");
-O(["true","oldmoz"],"GridEdit.oldmoz.c8972c018bf40dda3d8ebedc2f4afe6b.cache.html");
-O(["true","safari"],"GridEdit.safari.5426bfc14470d02e8bccb58911325346.cache.html");
-O(["true","mozilla"],"GridEdit.mozilla.8471b2851d15f9a52bf436d66350a422.cache.html");
+    O(["true","ie6"],"GridEdit.ie6.4214f2dfcc31c37df43ebbd55dbdedf3.cache.html");
+O(["true","opera"],"GridEdit.opera.6f93e11aa1b7ecf5d535e607c9baa1d2.cache.html");
+O(["true","oldmoz"],"GridEdit.oldmoz.cbd3b91019ddb848d735637ad4658a60.cache.html");
+O(["true","safari"],"GridEdit.safari.e64358d2df53dcc4c0bb8d58082c21af.cache.html");
+O(["true","mozilla"],"GridEdit.mozilla.2ced2095ba008e7fb920d971baf82651.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];

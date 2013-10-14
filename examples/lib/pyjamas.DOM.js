@@ -2978,7 +2978,7 @@ $pyjs['loaded_modules']['pyjamas.DOM'] = function (__mod_name__) {
 		$m['setStyleAttributes'] = function(element) {
 			if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 2)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 			var kwargs = arguments['length'] >= 2 ? arguments[arguments['length']-1] : arguments[arguments['length']];
-			if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+			if (kwargs === null || typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
 				kwargs = arguments[arguments['length']+1];
 			} else {
 				delete kwargs['$pyjs_is_kwarg'];

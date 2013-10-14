@@ -178,7 +178,7 @@ $pyjs['loaded_modules']['pyjamas.ui.FormPanel'] = function (__mod_name__) {
 				if (this['__is_instance__'] === true) {
 					var self = this;
 					var kwargs = arguments['length'] >= 2 ? arguments[arguments['length']-1] : arguments[arguments['length']];
-					if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+					if (kwargs === null || typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
 						var kwargs = arguments[arguments['length']+1];
 					} else {
 						delete kwargs['$pyjs_is_kwarg'];
@@ -188,7 +188,7 @@ $pyjs['loaded_modules']['pyjamas.ui.FormPanel'] = function (__mod_name__) {
 					var self = arguments[0];
 					target = arguments[1];
 					var kwargs = arguments['length'] >= 3 ? arguments[arguments['length']-1] : arguments[arguments['length']];
-					if (typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
+					if (kwargs === null || typeof kwargs != 'object' || kwargs['__name__'] != 'dict' || typeof kwargs['$pyjs_is_kwarg'] == 'undefined') {
 						kwargs = arguments[arguments['length']+1];
 					} else {
 						delete kwargs['$pyjs_is_kwarg'];

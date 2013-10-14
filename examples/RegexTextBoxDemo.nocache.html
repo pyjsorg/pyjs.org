@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"RegexTextBoxDemo.ie6.b1e38d8e44bb7f82bd519f1d6c4080b4.cache.html");
-O(["true","opera"],"RegexTextBoxDemo.opera.37ffb3365381f8213b2759460f7998eb.cache.html");
-O(["true","oldmoz"],"RegexTextBoxDemo.oldmoz.474187534872f7bb1839b444c49d81d6.cache.html");
-O(["true","safari"],"RegexTextBoxDemo.safari.72b6542a8a0063d8064d93ba5c59f046.cache.html");
-O(["true","mozilla"],"RegexTextBoxDemo.mozilla.c253c5894f7d16f385547f7deac87f06.cache.html");
+    O(["true","ie6"],"RegexTextBoxDemo.ie6.cb4510f22918dbebab40a9cbe6e0136f.cache.html");
+O(["true","opera"],"RegexTextBoxDemo.opera.d6d764d2b930ca80dd4534b90cff9d80.cache.html");
+O(["true","oldmoz"],"RegexTextBoxDemo.oldmoz.e1927c345f0bdd2545b96c65f25d1868.cache.html");
+O(["true","safari"],"RegexTextBoxDemo.safari.01da1124ca9963db2326110d9298a9cf.cache.html");
+O(["true","mozilla"],"RegexTextBoxDemo.mozilla.b32c9769fd49792682d54bb04e13c26f.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];

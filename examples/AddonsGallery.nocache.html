@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"AddonsGallery.ie6.0fbc41d8cb402ae507b6aeb3281022ff.cache.html");
-O(["true","opera"],"AddonsGallery.opera.b971a371f2bc133ce56bfdd7a7dcbc58.cache.html");
-O(["true","oldmoz"],"AddonsGallery.oldmoz.f543ce3e10c8e7b1702f88ec7a35a4f2.cache.html");
-O(["true","safari"],"AddonsGallery.safari.e33a017e69e358f6eb1035ce655ab688.cache.html");
-O(["true","mozilla"],"AddonsGallery.mozilla.9dc74ad890a097cead01df0d4e95db62.cache.html");
+    O(["true","ie6"],"AddonsGallery.ie6.4cfd1057b1a664b8ec5cb36bf625a4fb.cache.html");
+O(["true","opera"],"AddonsGallery.opera.9eda63872d9949828cea2f4c8f024c0f.cache.html");
+O(["true","oldmoz"],"AddonsGallery.oldmoz.b9f175c7c39783cf497c7fd0d390e098.cache.html");
+O(["true","safari"],"AddonsGallery.safari.38a8d3f587c1c8acf01cc97e8fbd2516.cache.html");
+O(["true","mozilla"],"AddonsGallery.mozilla.77539e9ff8259c4cddf8d9a0bdaa745c.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];

@@ -18,7 +18,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 			var $cls_definition = new Object();
 			var $method;
 			$cls_definition['__module__'] = 'pyjamas.Timer';
-			$cls_definition['__md5__'] = '7d3a6efddf2e7f525cca6ac6b0c86b94';
+			$cls_definition['__md5__'] = '67d28255a7f28a3ada89d53da4a2919e';
 			$cls_definition['__timers'] = $p['set']();
 			$cls_definition['__WindowCloseListener'] = (function(){
 				var $cls_definition = new Object();
@@ -96,7 +96,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && (arguments['length'] < 1 || arguments['length'] > 3)) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 3, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -202,7 +202,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -223,7 +223,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -275,7 +275,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -309,7 +309,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -362,7 +362,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -407,17 +407,45 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 			$method = $pyjs__bind_method2('__fire', function() {
 				if (this['__is_instance__'] === true) {
 					var self = this;
-					if ($pyjs['options']['arg_count'] && arguments['length'] != 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']+1);
+					var args = $p['tuple']($pyjs_array_slice['call'](arguments,0,arguments['length']-1));
+
+					var kwds = arguments['length'] >= 1 ? arguments[arguments['length']-1] : arguments[arguments['length']];
+					if (kwds === null || typeof kwds != 'object' || kwds['__name__'] != 'dict' || typeof kwds['$pyjs_is_kwarg'] == 'undefined') {
+						if (typeof kwds != 'undefined') args['__array']['push'](kwds);
+						var kwds = arguments[arguments['length']+1];
+					} else {
+						delete kwds['$pyjs_is_kwarg'];
+					}
+					if ($pyjs['options']['arg_count'] && arguments['length'] < 0) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, null, arguments['length']+1);
 				} else {
 					var self = arguments[0];
+					var args = $p['tuple']($pyjs_array_slice['call'](arguments,1,arguments['length']-1));
+
+					var kwds = arguments['length'] >= 2 ? arguments[arguments['length']-1] : arguments[arguments['length']];
+					if (kwds === null || typeof kwds != 'object' || kwds['__name__'] != 'dict' || typeof kwds['$pyjs_is_kwarg'] == 'undefined') {
+						if (typeof kwds != 'undefined') args['__array']['push'](kwds);
+						kwds = arguments[arguments['length']+1];
+					} else {
+						delete kwds['$pyjs_is_kwarg'];
+					}
 					if ($pyjs['options']['arg_is_instance'] && self['__is_instance__'] !== true) $pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
-					if ($pyjs['options']['arg_count'] && arguments['length'] != 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, 1, arguments['length']);
+					if ($pyjs['options']['arg_count'] && arguments['length'] < 1) $pyjs__exception_func_param(arguments['callee']['__name__'], 1, null, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
+					}
+				}
+				if (typeof kwds == 'undefined') {
+					kwds = $p['__empty_dict']();
+					if (typeof self != 'undefined') {
+						if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+							kwds = self;
+							self = arguments[1];
+						}
+					} else {
 					}
 				}
 				var $bool10,$bool9;
@@ -447,7 +475,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 				self['__onTimer']();
 				return null;
 			}
-	, 1, [null,null,['self']]);
+	, 1, ['args',['kwds'],['self']]);
 			$cls_definition['__fire'] = $method;
 			$method = $pyjs__bind_method2('__setTimeout', function(delayMillis) {
 				if (this['__is_instance__'] === true) {
@@ -460,7 +488,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -487,7 +515,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -511,7 +539,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}
@@ -538,7 +566,7 @@ $pyjs['loaded_modules']['pyjamas.Timer'] = function (__mod_name__) {
 					if ($pyjs['options']['arg_count'] && arguments['length'] != 2) $pyjs__exception_func_param(arguments['callee']['__name__'], 2, 2, arguments['length']);
 				}
 				if ($pyjs['options']['arg_instance_type']) {
-					if (self.prototype['__md5__'] !== '7d3a6efddf2e7f525cca6ac6b0c86b94') {
+					if (self.prototype['__md5__'] !== '67d28255a7f28a3ada89d53da4a2919e') {
 						if (!$p['_isinstance'](self, arguments['callee']['__class__'])) {
 							$pyjs__exception_func_instance_expected(arguments['callee']['__name__'], arguments['callee']['__class__']['__name__'], self);
 						}

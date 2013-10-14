@@ -26,6 +26,9 @@ window["provider$user.agent"] = function() {
    else if (ua.indexOf('msie 9.0') != -1) {
     return 'ie6';
   }
+   else if (ua.indexOf('msie 10.0') != -1) {
+    return 'ie6';
+  }
    else if (ua.indexOf('mozilla') != -1) {
     var geckoIdx = ua.indexOf('gecko/');
     if (geckoIdx == -1) 
@@ -81,11 +84,11 @@ function selectScript() {
     var F;
     var I = ["true", (F=window["prop$user.agent"],F())];
 
-    O(["true","ie6"],"GeocodingSimple.ie6.fffdec6cf94da1c5df92aed90e32f208.cache.html");
-O(["true","opera"],"GeocodingSimple.opera.a9c775ea5c59dafbfe2276b3497a7de3.cache.html");
-O(["true","oldmoz"],"GeocodingSimple.oldmoz.663307b56a08a51b23ffc1d5e1d7b480.cache.html");
-O(["true","safari"],"GeocodingSimple.safari.c46fdaf23727a61b32fd827f2b4a88f2.cache.html");
-O(["true","mozilla"],"GeocodingSimple.mozilla.12cebe75b5d6749d78fd874a23ce65c7.cache.html");
+    O(["true","ie6"],"GeocodingSimple.ie6.d7f17165d60cea2dcb2738f3fc30e09d.cache.html");
+O(["true","opera"],"GeocodingSimple.opera.87c5714feb902f9358348eedc04c9639.cache.html");
+O(["true","oldmoz"],"GeocodingSimple.oldmoz.1d0037962fbd1dc6734fa02a46b85d49.cache.html");
+O(["true","safari"],"GeocodingSimple.safari.acde726ccdb6dd631cbc35db63e15588.cache.html");
+O(["true","mozilla"],"GeocodingSimple.mozilla.257612ba4076b8607e9f445629245467.cache.html");
 
 
     var strongName = O.answers[I[0]][I[1]];
