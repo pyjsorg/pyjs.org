@@ -60,11 +60,29 @@ a:active {
 
 #body {
     padding: 1.4em;
-    width: 50%;
     float: left;
+    width: 50em;
 }
 
 p {
     line-height: 1.3em;
     margin-bottom: 1.4em;
+}
+
+@media screen and (max-width: 60em) {
+
+    #body,
+    #menu {
+        float: none;
+        width: auto;
+        font-size: 110%;
+    }
+
+    #logo {
+        float: left;
+        height: 33em;
+        border-right: 2px solid black;
+        border-top: 1px solid black;
+        padding: 1px;
+    }
 }
