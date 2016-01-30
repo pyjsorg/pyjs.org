@@ -11,15 +11,17 @@ h2 {
     width: 98.7%;
     margin: 0;
     padding: 0.7em 0.2em 0.7em 0.2em;
-    border: 3px solid #ffffff;
+    border: 3px solid white;
     background-color: rgb(150, 50, 200);
     text-align: center;
 }
 
 #logo {
     margin: 2px 24px 0px 15px;
+    padding-top: .4em;
     float: left;
     border: 0;
+    width: 54px;
 }
 
 #donation {
@@ -349,4 +351,3 @@ a:visited {
     border: 0px;
     background: #91c0ef url(images/hborder.png) repeat-x;
 }
-
